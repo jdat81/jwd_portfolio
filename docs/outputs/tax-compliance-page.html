@@ -20,9 +20,10 @@
             border-radius: 8px;
             background-color: white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
         }
         .graph-container img {
-            max-width: 100%;
+            width: 100%; /* Full-width image */
             height: auto;
             border-radius: 4px;
         }
@@ -75,30 +76,26 @@
         <section class="analysis-section">
             <div class="container">
                 <h2 class="mb-4">Key Findings</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="graph-container">
-                            <h3>Tax Compliance by Key Indicator</h3>
-                            <img src="/jwd_portfolio/graphs/tax_compliance_analysis.png" alt="Tax Compliance Analysis" class="img-fluid">
-                            <p class="mt-3">This graph displays tax compliance rates by key indicators, providing insights into variations based on different treatments and demographic factors.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Statistical Highlights</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Significant treatment effects across different experimental conditions</li>
-                            <li class="list-group-item">Notable variations in compliance rates between countries</li>
-                            <li class="list-group-item">Gender-based differences in tax compliance behavior</li>
-                            <li class="list-group-item">Strong baseline effects in the control condition</li>
-                        </ul>
-                    </div>
+                <div class="graph-container">
+                    <h3>Tax Compliance by Key Indicator</h3>
+                    <img src="/jwd_portfolio/graphs/tax_compliance_analysis.png" alt="Tax Compliance Analysis" class="img-fluid">
+                    <p class="mt-3">This graph displays tax compliance rates by key indicators, providing insights into variations based on different treatments and demographic factors.</p>
                 </div>
+
+                <!-- Statistical Highlights Section Below the Image -->
+                <h3>Statistical Highlights</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">Significant treatment effects across different experimental conditions</li>
+                    <li class="list-group-item">Notable variations in compliance rates between countries</li>
+                    <li class="list-group-item">Gender-based differences in tax compliance behavior</li>
+                    <li class="list-group-item">Strong baseline effects in the control condition</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Methodology -->
+        <!-- Packages & Programs Section -->
         <section class="mb-5">
-            <h2>Methodology</h2>
+            <h2>Packages & Programs</h2>
             <div class="code-block">
                 <h4>Technologies Used:</h4>
                 <ul>
@@ -112,8 +109,7 @@
         <!-- GitHub Link -->
         <section class="text-center py-4">
             <a href="outputs/tax-compliance-page.html" class="btn btn-primary">View Project</a>
-                View Source Code on GitHub
-            </a>
+            <a href="https://github.com/jdat81/jwd_portfolio/tax-compliance-analysis" class="btn btn-secondary">View Source Code on GitHub</a>
         </section>
     </main>
 
@@ -127,4 +123,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
