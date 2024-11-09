@@ -1,0 +1,68 @@
+# Update the HTML content to include interactive plots
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Insights Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .analysis-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .visualization {
+            text-align: center;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consumer Insights Analysis</h1>
+    
+    <div class="analysis-section">
+        <h2>Project Overview</h2>
+        <p>This analysis explores customer behavior patterns across different segments, analyzing purchase frequency, 
+        satisfaction levels, and product preferences to derive actionable business insights.</p>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Key Findings</h2>
+        <ul>
+            <li>Premium customers show significantly higher average spend with clear statistical difference (95% CI)</li>
+            <li>Purchase frequency follows a normal distribution with mean of 12 purchases per year</li>
+            <li>Age shows positive correlation with customer satisfaction</li>
+            <li>Product category distribution shows balanced market presence across segments</li>
+        </ul>
+    </div>
+
+    <div class="visualization">
+        <iframe src="../graphs/consumer_insights_interactive.html"></iframe>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Methodology</h2>
+        <p>Analysis conducted using Python, employing statistical methods including confidence intervals for robust segment comparison. 
+        Interactive visualizations created using Plotly with emphasis on clear communication of insights and statistical significance.</p>
+    </div>
+</body>
+</html>
+
+
