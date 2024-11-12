@@ -5,6 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Willing to Pay - Tax Compliance Analysis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg-gradient {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+        .graph-container {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .analysis-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .code-block {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .nav-button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-button:hover {
+            background-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+        .nav-button svg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -27,6 +82,24 @@
         </div>
     </nav>
 
+    <!-- Corner Navigation -->
+    <div class="nav-container">
+        <a href="../index.html" class="nav-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Home
+        </a>
+        <a href="inequality_transparency.html" class="nav-button">
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+    </div>
+
     <!-- Header -->
     <header class="py-4 bg-light">
         <div class="container">
@@ -38,7 +111,7 @@
     <!-- Main Content -->
     <main class="container py-4">
         <!-- Project Overview -->
-        <section class="mb-5">
+        <section class="analysis-section">
             <h2>Project Overview</h2>
             <p>This analysis examines tax compliance behavior across different experimental treatments in multiple countries. The study investigates how various factors influence tax compliance decisions and explores demographic variations in compliance rates.</p>
         </section>
@@ -53,7 +126,7 @@
                     <p class="mt-3">This graph displays tax compliance rates by key indicators, providing insights into variations based on different treatments and demographic factors.</p>
                 </div>
 
-                <!-- Statistical Highlights Section Below the Image -->
+                <!-- Statistical Highlights -->
                 <h3>Statistical Highlights</h3>
                 <ul class="list-group mb-4">
                     <li class="list-group-item">Significant treatment effects across different experimental conditions</li>
@@ -64,8 +137,8 @@
             </div>
         </section>
 
-        <!-- Packages & Programs Section -->
-        <section class="mb-5">
+        <!-- Packages & Programs -->
+        <section class="analysis-section">
             <h2>Packages & Programs</h2>
             <div class="code-block">
                 <h4>Technologies Used:</h4>
@@ -87,7 +160,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>© 2024 John Dattoma. All rights reserved.</p>
+            <p>© 2024 John D'Attoma. All rights reserved.</p>
         </div>
     </footer>
 
