@@ -129,36 +129,81 @@
         </section>
 
         <!-- Visualization Grid -->
-        <section class="analysis-section">
-            <h2>Analysis Results</h2>
-            <div class="grid-container">
-                <!-- Wordcloud -->
-                <div class="graph-container">
-                    <h4>Topic Word Distribution</h4>
-                    <div class="wordcloud-container">
-                        <img src="/jwd_portfolio/graphs/yankees_wordcloud.png" alt="Yankees Topics Wordcloud">
-                    </div>
-                </div>
-                
-                <!-- Top Topics -->
-                <div class="graph-container">
-                    <h4>Most Common Topics</h4>
-                    <iframe src="/jwd_portfolio/graphs/yankees_topics.png" width="150%" height="100%" frameborder="0"></iframe>
-                </div>
-                
-                <!-- Topics Over Time -->
-                <div class="graph-container">
-                    <h4>Topic Evolution</h4>
-                    <iframe src="/jwd_portfolio/graphs/yankees_topics_time.html" width="150%" height="100%" frameborder="0"></iframe>
-                </div>
-                
-                <!-- Topic Hierarchy -->
-                <div class="graph-container">
-                    <h4>Topic Relationships</h4>
-                    <iframe src="/jwd_portfolio/graphs/yankees_topic_hierarchy.html" width="150%" height="100%" frameborder="0"></iframe>
+<section class="analysis-section">
+    <h2>Analysis Results</h2>
+
+    <!-- First Row -->
+    <div class="row mb-4">
+        <!-- Wordcloud -->
+        <div class="col-md-6">
+            <div class="graph-container">
+                <h4>Topic Word Distribution</h4>
+                <div class="wordcloud-container">
+                    <img src="/jwd_portfolio/graphs/yankees_wordcloud.png" alt="Yankees Topics Wordcloud" class="img-fluid">
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Top Topics -->
+        <div class="col-md-6">
+            <div class="graph-container">
+                <h4>Most Common Topics</h4>
+                <iframe src="/jwd_portfolio/graphs/yankees_topics.png" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+        <!-- Topic Hierarchy -->
+        <div class="col-md-12 mb-4">
+            <div class="graph-container">
+                <h4>Topic Relationships</h4>
+                <iframe src="/jwd_portfolio/graphs/yankees_topic_hierarchy.html" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <!-- Topics Over Time -->
+        <div class="col-md-12">
+            <div class="graph-container">
+                <h4>Topic Evolution</h4>
+                <iframe src="/jwd_portfolio/graphs/yankees_topics_time.html" style="width: 100%; height: 500px;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.analysis-section {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.graph-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wordcloud-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wordcloud-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+</style>
+
 
         <!-- Key Findings -->
         <section class="analysis-section">
