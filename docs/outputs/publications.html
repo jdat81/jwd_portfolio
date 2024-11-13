@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications & Resume - John D'Attoma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .bg-gradient {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+        .publications-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .nav-button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-button:hover {
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+        .resume-button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        .resume-button:hover {
+            background-color: #16a085;
+            color: white;
+            transform: translateY(-2px);
+        }
+        h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">John D'Attoma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#skills">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Corner Navigation -->
+    <div class="nav-container">
+        <a href="../index.html" class="nav-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Home
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container py-4">
+        <div class="text-center mb-4">
+            <h1 class="display-4">Publications & Resume</h1>
+            <a href="Data_Scientist_Resume.pdf" class="resume-button" target="_blank">View Resume</a>
+        </div>
+
+        <section class="publications-section">
+            <h3>Books</h3>
+            <div class="publication-item">
+                <p>D'Attoma, J., & Steinmo, S. (2025). Designed to fail: Why americans love their country and hate their government. Forthcoming. New Haven: Yale University Press</p>
+            </div>
+            <div class="publication-item">
+                <p>Steinmo, S., & D'Attoma, J. (2021). Willing to pay?: A reasonable choice approach. Oxford University Press</p>
+            </div>
+
+            <h3>Refereed Journal Publications</h3>
+            <div class="publication-item">
+                <p>Rees-Jones, A., D'Attoma, J., Piolatto, A., & Salvadori, L. (2022). Experience of the covid-19 pandemic and support for safety-net expansion. Journal of Economic Behavior Organization, 200, 1090–1104.</p>
+            </div>
+            <div class="publication-item">
+                <p>Guerra, A., Harrington, B., Steinmo, S., & D'Attoma, J. (2022). Do experienced subjects bias experimental results? evidence from 16 laboratories in six countries. Economic and Political Studies, 1–15</p>
+            </div>
+            <div class="publication-item">
+                <p>Tuxhorn, K.-L., D'Attoma, J., & Steinmo, S. (2021). Do citizens want something for nothing? mass attitudes and the federal budget. Politics & Policy</p>
+            </div>
+            <div class="publication-item">
+                <p>D'Attoma, J. W., Volintiru, C., & Malézieux, A. (2020). Gender, social value orientation, and tax compliance. CESifo Economic Studies, 66(3), 265–284</p>
+            </div>
+            <div class="publication-item">
+                <p>D'Attoma, J. (2020). More bang for your buck: Tax compliance in the united states and italy. Journal of public policy, 40(1), 1–24</p>
+            </div>
+            <div class="publication-item">
+                <p>D'Attoma, J. (2019). What explains the north–south divide in italian tax compliance? an experimental analysis. Acta Politica, 54(1), 104–123</p>
+            </div>
+            <div class="publication-item">
+                <p>Bruner, D. M., D'Attoma, J., & Steinmo, S. (2017). The role of gender in the provision of public goods through tax compliance. Journal of Behavioral and Experimental Economics, 71, 45–55</p>
+            </div>
+            <div class="publication-item">
+                <p>Andrighetto, G., Zhang, N., Ottone, S., Ponzano, F., D'Attoma, J., & Steinmo, S. (2016). Are some countries more honest than others? evidence from a tax compliance experiment in sweden and italy. Frontiers in psychology, 7, 472</p>
+            </div>
+            <div class="publication-item">
+                <p>D'Attoma, J. (2011). Hegemony or dominance? a gramscian analysis of us ascendancy. Critique: a worldwide journal of politics, 1–14</p>
+            </div>
+
+            <h3>Articles Under Review</h3>
+            <div class="publication-item">
+                <p>Chen, J., D'Attoma, J. W., Malézieux, A., & Fonseca, M. A. (2024). Inequality, (the demand for) wealth secrecy, and public good provision: Experimental evidence. R & R</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2024 John D'Attoma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
