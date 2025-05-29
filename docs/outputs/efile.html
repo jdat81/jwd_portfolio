@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Adoption Study - John D'Attoma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .bg-gradient {
+            background: linear-gradient(to right, #2c3e50, #3498db);
+        }
+        .graph-container {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .analysis-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+            margin-right: calc((100% - 1200px) / 2);
+        }
+        .nav-button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nav-button:hover {
+            background-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+        }
+        .nav-button svg {
+            width: 16px;
+            height: 16px;
+        }
+        @media (max-width: 1200px) {
+            .nav-container {
+                margin-right: 0;
+            }
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .chart-item {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .chart-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .chart-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .chart-description {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+        .methodology-box {
+            background: linear-gradient(135deg, #e8f4fd 0%, #d4eaf7 100%);
+            border-left: 4px solid #2c3e50;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .key-findings {
+            background-color: #1abc9c;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .intervention-materials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .material-item {
+            text-align: center;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .material-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .results-highlight {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .results-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .stat-box {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem;
+            min-width: 150px;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <a href="../index.html" class="nav-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Home
+        </a>
+        
+        <a href="outputs/digital_adoption_study.pdf" class="nav-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Full Paper
+        </a>
+    </div>
+
+    <h1>Driving E-Filing Adoption: A Behavioral Science Approach to Digital Transformation</h1>
+
+    <div class="analysis-section">
+        <h2>Project Overview</h2>
+        <p>This large-scale behavioral intervention study focused on significantly increasing payroll tax e-filing adoption among businesses and tax preparers. Using rigorous experimental design and behavioral science principles, we implemented targeted communication strategies to shift users from traditional paper filing to efficient digital platforms.</p>
+        
+        <div class="methodology-box">
+            <h3>Research Design Highlights</h3>
+            <ul>
+                <li><strong>Scale:</strong> 22,500 initial filers (90,000 total observations via Latin square design)</li>
+                <li><strong>Method:</strong> Randomized Controlled Trial (RCT) with three arms: Postcard, Letter/Flyer, Control</li>
+                <li><strong>Design:</strong> Extra-period Latin squares sequence for maximum statistical power</li>
+                <li><strong>Duration:</strong> 4 quarterly filing periods with phased interventions</li>
+                <li><strong>Collaboration:</strong> Cross-functional team including UX/Design, Communications, Legal, and Data Analytics</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="key-findings">
+        <h2>Key Research Findings</h2>
+        <ul>
+            <li><strong>Postcards Outperformed:</strong> Consistent and significantly higher effectiveness across all filer segments</li>
+            <li><strong>Behavioral Science Validated:</strong> Simple, salient "nudges" proved more effective than information-heavy approaches</li>
+            <li><strong>Measurable Impact:</strong> 5.8-7.1 percentage point increases in e-filing probability</li>
+            <li><strong>Cost-Effective Solution:</strong> Lower-cost intervention showed superior results</li>
+        </ul>
+    </div>
+
+    <div class="results-highlight">
+        <h3>Statistical Results Summary</h3>
+        <div class="stat-box">
+            <span class="stat-number">+5.8pp</span>
+            <span class="stat-label">Taxpayer Only<br>Postcard Effect</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">+6.2pp</span>
+            <span class="stat-label">Paid-Preparer<br>Postcard Effect</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">+7.1pp</span>
+            <span class="stat-label">Mixed Segment<br>Postcard Effect</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-number">~20%</span>
+            <span class="stat-label">Increase in E-filing<br>Odds (OR ~1.2)</span>
+        </div>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Intervention Design & Materials</h2>
+        <p>Working closely with UX/UI designers and communications teams, we created targeted materials based on behavioral science principles. Each intervention emphasized the core benefits of e-filing: <strong>Secure, Easy, and Accurate</strong>.</p>
+        
+        <div class="intervention-materials">
+            <div class="material-item">
+                <img src="graphs/Taxpayer Flyer_v4.png" alt="Taxpayer E-File Flyer">
+                <div class="chart-title">Taxpayer Flyer</div>
+                <div class="chart-description">Detailed information approach with clear benefits and user-friendly design for individual business owners.</div>
+            </div>
+            
+            <div class="material-item">
+                <img src="graphs/Preparer Flyer_v4.png" alt="Preparer E-File Flyer">
+                <div class="chart-title">Preparer Flyer</div>
+                <div class="chart-description">Professional messaging focused on practice efficiency and enhanced client service for tax professionals.</div>
+            </div>
+            
+            <div class="material-item">
+                <img src="graphs/Taxpayer Postcard_v4.png" alt="Taxpayer E-File Postcard">
+                <div class="chart-title">Taxpayer Postcard</div>
+                <div class="chart-description">Concise nudge approach with immediate visual impact and clear call-to-action for rapid processing.</div>
+            </div>
+            
+            <div class="material-item">
+                <img src="graphs/Preparer Postcard_v4.png" alt="Preparer E-File Postcard">
+                <div class="chart-title">Preparer Postcard</div>
+                <div class="chart-description">Direct professional message emphasizing efficiency and reliability for tax service providers.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-grid">
+        <div class="chart-item">
+            <div class="chart-title">Average Marginal Effects</div>
+            <img src="graphs/V5_R_average_marginal_effects_plot_XL.png" alt="Average marginal effects showing postcard superiority">
+            <div class="chart-description">Average Marginal Effects demonstrate postcards consistently outperformed letters across all filer segments, with increases of 5.8-7.1 percentage points in e-filing probability.</div>
+        </div>
+
+        <div class="chart-item">
+            <div class="chart-title">Odds Ratios Analysis</div>
+            <img src="graphs/V5_R_odds_ratios_plot_XL.png" alt="Odds ratios confirming postcard effectiveness">
+            <div class="chart-description">Odds Ratios reinforce AME findings, showing postcards increased e-filing odds by approximately 20% across all segments compared to control.</div>
+        </div>
+
+        <div class="chart-item">
+            <div class="chart-title">Experimental Design Framework</div>
+            <img src="graphs/experimental_design_figure.png" alt="Latin square experimental design diagram">
+            <div class="chart-description">Extra-period Latin square design with 6 sequences distributing treatments across 4 quarterly periods, maximizing statistical power and ensuring reliable measurement.</div>
+        </div>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Strategic Impact & Business Value</h2>
+        
+        <h3>Validated Digital Adoption Model</h3>
+        <p>This study provides a proven framework for increasing digital platform adoption through targeted behavioral interventions. The research demonstrates that simple, well-designed "nudges" can be more effective than complex information campaigns.</p>
+        
+        <h3>Cross-Functional Collaboration Success</h3>
+        <p>The project's success hinged on strategic coordination across diverse teams including executive sponsors, compliance/legal, research, communications, UX/design, and data analytics. This collaborative blueprint is essential for executing complex, high-impact initiatives.</p>
+        
+        <h3>Measurable ROI</h3>
+        <ul>
+            <li>Significant increase in digital adoption rates</li>
+            <li>Reduced operational costs associated with paper processing</li>
+            <li>Enhanced user experience through simplified digital onboarding</li>
+            <li>Scalable model for future digital transformation initiatives</li>
+        </ul>
+    </div>
+
+    <div class="analysis-section">
+        <h2>Research Methodology</h2>
+        
+        <h3>Rigorous Experimental Design</h3>
+        <p>Our approach employed a sophisticated extra-period Latin squares sequence within a Randomized Controlled Trial framework. This within-subject design significantly enhanced statistical efficiency, allowing detection of smaller yet meaningful effects with greater confidence.</p>
+        
+        <h3>Behavioral Science Foundation</h3>
+        <p>Interventions were grounded in established behavioral science principles, particularly the effectiveness of simple, timely nudges over information-heavy approaches for busy professional audiences. The design emphasized clarity, actionability, and trust-building.</p>
+        
+        <h3>Statistical Analysis</h3>
+        <p>We utilized probit regression models ideal for binary outcomes (e-file vs. paper), estimating treatment effects on probabilities while controlling for demographic and business characteristics. This approach ensured we isolated the causal impact of our communications.</p>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2024 John D'Attoma. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
