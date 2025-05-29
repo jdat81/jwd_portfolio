@@ -6,6 +6,11 @@
     <title>John D'Attoma - Lead UX Researcher & Data Scientist</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        
         .project-card {
             transition: transform 0.3s ease-in-out;
             height: 100%;
@@ -18,93 +23,196 @@
             object-fit: cover;
         }
         .bg-gradient {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #3a7f98 0%, #2c6b7d 100%);
         }
         .text-highlight {
-            color: #2a5298;
+            color: #3a7f98;
         }
         .skills-section {
             background-color: #f8f9fa;
-            padding: 2rem 0;
+            padding: 4rem 0;
         }
-        .header-title {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #1e3c72;
-            margin-bottom: 0.2rem;
-        }
-        .header-subtitle {
-            font-size: 1.75rem;
-            color: #2a5298;
-            margin-bottom: 0.5rem;
-        }
-        .header-section {
+        
+        /* Hero Section Styling */
+        .hero-section {
             background: linear-gradient(to right, #f8f9fa, #ffffff);
-            padding: 1.5rem 0;
-            border-bottom: 3px solid #2a5298;
+            padding: 4rem 0 4rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-content {
+            max-width: 50%;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+        .hero-subtitle {
+            font-size: 2rem;
+            color: #3a7f98;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+        .hero-description {
+            font-size: 1.2rem;
+            color: #ababab;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .hero-image {
+            max-width: 45%;
+            margin-left: auto;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: #3a7f98 !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav-link {
             transition: color 0.3s ease;
+            color: rgba(255,255,255,0.9) !important;
         }
         .nav-link:hover {
-            color: #1abc9c !important;
+            color: #ffffff !important;
         }
-        .header-links {
-            margin-top: 1.5rem;
+        .navbar-brand {
+            color: #ffffff !important;
+            font-weight: 600;
         }
-        .header-links .btn {
-            margin-right: 1rem;
-            display: inline-flex;
+        
+        /* Button Styling */
+        .btn-primary {
+            background-color: #3a7f98;
+            border-color: #3a7f98;
+            padding: 12px 24px;
+            font-weight: 500;
+        }
+        .btn-primary:hover {
+            background-color: #2c6b7d;
+            border-color: #2c6b7d;
+        }
+        .btn-outline-primary {
+            color: #3a7f98;
+            border-color: #3a7f98;
+            padding: 12px 24px;
+            font-weight: 500;
+        }
+        .btn-outline-primary:hover {
+            background-color: #3a7f98;
+            border-color: #3a7f98;
+        }
+        
+        /* Three Column Section */
+        .capabilities-section {
+            background-color: #ffffff;
+            padding: 5rem 0;
+        }
+        .capability-item {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .capability-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #3a7f98;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+        }
+        .capability-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+        .capability-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+        .capability-description {
+            color: #ababab;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        /* Projects Section */
+        .projects-section {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                padding: 3rem 0 3rem 0;
+                text-align: center;
+            }
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            .hero-image {
+                max-width: 80%;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
-        <div class="container">
-            <a class="navbar-brand" href="#">John D'Attoma</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="outputs/publications.html">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="docs/Data_Scientist_Resume.pdf" target="_blank">Resume</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Header -->
-    <header class="header-section">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="header-title">John D'Attoma, Ph.D.</h1>
-                    <h2 class="header-subtitle">Lead UX Researcher & Data Scientist</h2>
-                    <p class="lead">Specializing in User Experience, People Insights, and Motivations</p>
-                    <div class="header-links">
-                        <a href="outputs/Data_Scientist_Resume.pdf" class="btn btn-primary" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-    </svg>
-    Resume
-</a>
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">John D'Attoma</h1>
+                    <h2 class="hero-subtitle">UX Researcher & Data Scientist</h2>
+                    <p class="hero-description">Uncover user insights, analyze behavioral patterns, and drive data-informed decisions - from supporting everyday product choices to enabling organizational transformation.</p>
+                    
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="docs/Data_Scientist_Resume.pdf" class="btn btn-primary" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text me-2" viewBox="0 0 16 16">
+                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                            </svg>
+                            See my resume
+                        </a>
                         <a href="outputs/publications.html" class="btn btn-outline-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text me-2" viewBox="0 0 16 16">
                                 <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
                                 <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
                             </svg>
@@ -112,14 +220,62 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-lg-6 hero-image d-none d-lg-block">
+                    <img src="../graphs/John 1.jpg" alt="John D'Attoma" class="img-fluid">
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="capabilities-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="capability-item">
+                        <div class="capability-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="capability-title">Discover</h3>
+                        <p class="capability-description">I'm trained and highly experienced in quant and qual user research methodologies, with expertise in behavioral economics. I design and conduct studies to uncover deep user insights and motivations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="capability-item">
+                        <div class="capability-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="capability-title">Analyze</h3>
+                        <p class="capability-description">I transform complex user data into actionable insights through advanced analytics, statistical modeling, and experimental design.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="capability-item">
+                        <div class="capability-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="capability-title">Influence</h3>
+                        <p class="capability-description">I am a strategic communicator who translates research findings into compelling narratives. I create evidence-based recommendations that drive product decisions and organizational change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5">
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="text-center mb-5">Featured Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="text-center text-muted mb-5">A sample of my client work and personal projects</p>
+            
             <div class="row g-4">
                 <!-- Consumer Insights Project -->
                 <div class="col-md-6 col-lg-4">
@@ -184,9 +340,9 @@
                 <!-- Baseball Dashboard -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card project-card">
-                        <img src="graphs/yankees_wordcloud.png" alt="\NYYankees BertTopic Modeling" class="card-img-top">
+                        <img src="graphs/yankees_wordcloud.png" alt="NYYankees BertTopic Modeling" class="card-img-top">
                         <div class="card-body">
-                            <h5 class="card-title">\NYYankees Reddit BertTopic Modeling</h5>
+                            <h5 class="card-title">NYYankees Reddit BertTopic Modeling</h5>
                             <p class="card-text">BertTopic modeling for unstructured data.</p>
                             <a href="outputs/reddit_baseball.html" class="btn btn-primary">View Dashboard</a>
                         </div>
@@ -196,45 +352,8 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="text-center mb-5">Technical Skills</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <h4 class="text-highlight">Data Analysis</h4>
-                    <ul class="list-unstyled">
-                        <li>Python (Pandas, NumPy)</li>
-                        <li>R Statistical Software</li>
-                        <li>SQL</li>
-                        <li>Stata</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="text-highlight">Visualization</h4>
-                    <ul class="list-unstyled">
-                        <li>Bokeh</li>
-                        <li>Matplotlib</li>
-                        <li>Seaborn</li>
-                        <li>ggplot</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4 class="text-highlight">Machine Learning</h4>
-                    <ul class="list-unstyled">
-                        <li>Scikit-learn</li>
-                        <li>TensorFlow</li>
-                        <li>Regression Analysis</li>
-                        <li>Classification Models</li>
-                        <li>Bert</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="footer">
         <div class="container text-center">
             <p>© 2024 John D'Attoma. All rights reserved.</p>
         </div>
