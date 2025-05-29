@@ -1,0 +1,1129 @@
+---
+title: "Powering UKG's User Experience"
+author: "John D'Attoma"
+format:
+  revealjs:
+    theme: serif
+    smaller: true
+    # ... other revealjs options ...
+    css: "custom.css"
+    self-contained: true
+    logo: "UKGlogo.png"
+    scrollable: true
+    mainfont: "Avenir" 
+    # monofont: "Some Monospace Font" 
+    incremental: true   
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  jupyter: python3
+#footer: "Powering UKG's UX"
+---
+
+## About Me: My Research Leadership Philosophy
+
+::: nonincremental
+**With 10 years as a Quantitative UX Researcher & Data Scientist, I translate complex behavioral data into strategic product decisions and measurable UX improvements. My approach connects rigorous research to business outcomes through clear metrics and cross-functional collaboration.**
+:::
+
+::: incremental
+**My leadership approach delivered measurable business results by connecting rigorous research to strategic outcomes. I increased IRS digital service adoption by 9% through evidence-based design changes. I also developed user satisfaction measurement frameworks adopted across multiple service channels, creating a unified view of experience quality that directly informed investment decisions.**
+:::
+
+::: notes
+My approach to UX research leadership is built on several core tenets, all aimed at delivering impactful, data-driven insights:
+
+-   **Leadership in Research Strategy & Execution:** This is about more than just conducting studies; it's about architecting comprehensive research programs that are strategically aligned with business objectives. For example, when working on large digital platforms like those at the IRS, I've designed and led initiatives that blend advanced mixed-methods – from deep ethnographic insights and contextual inquiry to large-scale statistical analysis of behavioral data and rigorous A/B testing. The goal is always to drive product roadmaps and achieve significant, measurable enhancements in user outcomes. A critical part of this strategic planning is defining upfront how we'll measure success, which involves identifying the right **Key Performance Indicators (KPIs)** from the start to track our progress toward an end goal. Every research plan I develop incorporates clear KPIs.
+
+-   **Quantifying UX & Driving Business Value:** I firmly believe that the value of UX research is most powerfully demonstrated when it's quantified. My work involves developing robust UX metrics and tracking systems, often using tools like Power BI or R Shiny, to provide ongoing visibility into the user experience. This isn't just about collecting data; it's about translating complex quantitative findings into clear, actionable recommendations that have a demonstrable ROI. For instance, by tracking KPIs such as **conversion rates**, **drop-off rates**, **user error rates**, and **time on task**, we were able to pinpoint specific areas for improvement that led to a 9% increase in digital adoption and a 5-point lift in user satisfaction scores in past projects. We'd also leverage tools like the **System Usability Scale (SUS)** for quick, reliable usability measurement and the **Net Promoter Score (NPS)** to gauge user loyalty and their likelihood to recommend the product. Answering "How did the research study go?" means reporting on these critical measures of progress.
+
+-   **Cross-Functional Influence & Mentorship:** Research insights deliver maximum value when they are understood and acted upon across the organization. A key part of my role is leading and mentoring research teams, fostering a broader culture of data literacy, and championing user-centered design principles with executive leadership. This includes educating stakeholders on how to interpret and use data from various UX **KPIs** effectively, ensuring that decisions are grounded in a shared understanding of user behavior and product performance. It’s about helping everyone understand not just *what* users do (e.g., their preference for **navigation vs. search**), but *why*, and how that impacts our goals.
+
+-   **Academic Foundation & Applied Innovation:** My PhD, which involved applying machine learning to behavioral analysis, provided a strong foundation in rigorous analytical techniques. This academic background, combined with a consistent record of securing research funding and publishing in peer-reviewed journals, underpins my commitment to applying innovative yet methodologically sound approaches to solve real-world product challenges and reliably measure their impact through well-chosen **KPIs**.
+
+This holistic approach ensures that research is not just an isolated activity, but a strategic function that drives continuous improvement and demonstrable business value.
+
+Thank you. Before we delve into the case studies, I'd like to briefly share my background and how it aligns with the kind of leadership UKG is seeking.
+
+For the past decade, I've operated at the intersection of quantitative user experience research and data science. My core focus has been on leveraging rigorous statistical methods and sophisticated experimental design to not just understand user behavior, but to optimize product experiences and directly inform pivotal design and business decisions.
+
+My approach emphasizes:
+
+-   **Leadership in Research Strategy & Execution:** As a Senior Quant UXR at the IRS, for instance, I was the architect of a comprehensive research strategy for their digital platforms. This wasn't just about isolated studies; it was about building a cohesive research program. We combined deep qualitative insights from ethnographic interviews and contextual inquiries with the power of large-scale statistical analysis of behavioral data and A/B testing. This holistic approach allowed us to identify critical user needs and directly drive product roadmap decisions, leading to measurable improvements such as a 5% increase in user satisfaction and a 9% lift in digital adoption for key services. My expertise spans the full research lifecycle, from initial problem definition and methodological design through to analysis and strategic reporting. *(Four Cs: Communication, Impact)*
+
+-   **Quantifying the User Experience & Driving Business Value:** A key part of my work involves translating complex, often abstract, user behaviors and sentiments into quantifiable metrics that the business can act upon. I've developed and managed strategic research roadmaps and comprehensive UX metrics tracking systems using tools like Power BI and R Shiny. This empowers leadership with clear, data-driven insights for resource allocation and product investment. I always aim to demonstrate the ROI of research, showing how improving UX directly contributes to business objectives. *(Four Cs: Counterfactual - Without robust UX metrics, decisions are less informed and impact is harder to prove.)*
+
+-   **Cross-Functional Influence & Mentorship:** True impact comes from embedding user insights across an organization. I have extensive experience leading and mentoring research teams, helping to standardize research frameworks and elevate the quality and consistency of research company-wide. I've also championed user-centered design principles with executive leadership, translating complex findings into compelling strategic narratives that have resulted in significant investments in user-centered improvements and the reduction of critical friction points. This involves fostering a culture of data literacy and ensuring research insights are effectively leveraged by product, design, and engineering teams. *(Four Cs: Collaboration, Leadership)*
+
+-   **Academic Foundation & Applied Innovation:** My PhD in Political Economics involved applying machine learning techniques to analyze complex cross-national behavioral patterns, providing a strong theoretical and analytical foundation. This academic rigor is complemented by a consistent record of securing research funding through compelling strategies and a commitment to sharing knowledge, evidenced by multiple peer-reviewed publications and awards like the IRS Commissioner's Award for Excellence in Data-Driven Decision Making.
+
+My overall goal is to leverage this blend of strategic research leadership, advanced analytical skill, and collaborative influence to help UKG continue to innovate and deliver exceptional user experiences.
+:::
+
+## UKG: Why These Cases Matter
+
+These case studies directly address core UKG challenges: optimizing AI experiences and increasing digital adoption across diverse user populations. The methods demonstrate how to extract actionable insights from complex user interactions that drive adoption of new technologies - particularly relevant as UKG expands its AI assistant capabilities. The outcomes show how quantifiable improvements in user experience translate to measurable business value for organizations like UKG with large enterprise customer bases.
+
+::: notes
+Now that I've introduced my background and research philosophy, I want to frame why the case studies I'll be presenting are particularly resonant with UKG's strategic direction and how they demonstrate a commitment to measurable outcomes.
+
+-   These case studies represent more than just research projects; they showcase **Strategic Alignment** with the kind of challenges and opportunities UKG faces, especially with its AI-first strategy. They are examples of end-to-end research leadership, transforming complex data from user interactions into strategic assets. My approach always includes defining clear **Key Performance Indicators (KPIs)** at the outset, ensuring that our research goals are tied to measurable progress.
+
+-   A core theme is **Solving Key Challenges.** Both UKG and the organizations in these studies grapple with the critical need to understand and optimize user experiences, particularly with AI-driven systems, to ensure high adoption rates and overall success. Understanding how users interact with these systems, for instance, by analyzing **time on task** or **user error rates**, is fundamental to improving them.
+
+-   The heart of my work, as demonstrated in these studies, is generating **Actionable Insights.** This means moving beyond surface-level observations to derive granular, data-driven insights from complex interaction data. These insights are then translated into specific recommendations aimed at improving systems effectively. The effectiveness of these improvements would, in turn, be measured against relevant **KPIs** such as improved **conversion rates** or reduced **drop-off rates**.
+
+-   Finally, the methodologies and outcomes have **Transferable Impact.** While the contexts may differ, the principles of understanding user behavior at scale, analyzing sentiment, driving adoption, and measuring success through defined **KPIs** like the **System Usability Scale (SUS)** or **Net Promoter Score (NPS)** are directly applicable to UKG's diverse product portfolio and its goal of enhancing the experience for its 80,000+ customers. We might also explore user preferences, like **navigation vs. search**, to tailor experiences. The goal is always to improve the user experience in ways that directly support business objectives and demonstrate a clear return on research investment.
+:::
+
+## UKG AI Assistant Demonstration
+
+```{=html}
+<div style="max-width: 700px; margin: 20px auto; border: 2px solid #2c3e50; border-radius: 12px; padding: 20px; background-color: #f8f9fa;">
+  <h4 style="text-align: center; color: #2c3e50; margin-bottom: 20px; font-family: serif;">UKG AI Assistant - Interactive Demo</h4>
+  
+  <div id="chatContainer" style="height: 350px; overflow-y: auto; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; background-color: white;">
+    <div style="text-align: left; margin-bottom: 15px;">
+      <div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Good morning! I'm here to help with your HR and benefits questions. What can I assist you with today?
+      </div>
+    </div>
+  </div>
+  
+  <div style="display: flex; gap: 10px;">
+    <input type="text" id="userInput" placeholder="Ask about your 401K..."
+           style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px;"
+           onkeypress="if(event.key==='Enter') sendMessage()">
+    <button onclick="sendMessage()"  
+            style="background-color: #2c3e50; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-weight: bold;">
+      Send
+    </button>
+  </div>
+  
+  <div style="margin-top: 10px; text-align: center;">
+    <button onclick="resetDemo()" style="background-color: #6c757d; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-size: 12px;">
+      Reset Demo
+    </button>
+  </div>
+</div>
+
+<script>
+let conversationStep = 0;
+const responses = [
+  // Step 1: AI offers to help with options
+  `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+    <strong>UKG Assistant:</strong> Absolutely! I'd be happy to help optimize your 401K contributions. Would you like me to analyze your current situation and provide you with some options?
+  </div>`,
+  
+  // Step 2: After user says yes
+  `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+    <strong>UKG Assistant:</strong> Perfect! Let me review your current situation.<br><br>
+    <strong>Your Current 401K Status:</strong><br>
+    • 2025 contribution limit: <strong>$23,500</strong><br>
+    • Your contributions so far: <strong>$21,500</strong><br>
+    • Remaining contribution capacity: <strong style="color: #2c3e50;">$2,000</strong><br><br>
+    Here are your optimization options:<br><br>
+    <strong>1.</strong> Distribute $2,000 evenly across your remaining 4 pay periods ($500 each)<br>
+    <strong>2.</strong> Make a lump sum contribution of $2,000 from your next paycheck<br>
+    <strong>3.</strong> Set up automatic optimization for 2026 to maximize contributions from January<br><br>
+    How would you like me to proceed?
+  </div>`,
+  
+  // Step 3: After user makes selection
+  `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+    <strong>UKG Assistant:</strong> Excellent choice! I'll set up the even distribution of $500 per pay period to maximize your 2025 contributions. This ensures you capture the full employer match while maintaining steady cash flow.<br><br>
+    I've submitted the payroll adjustment request and you'll see the changes starting with your next paycheck. You should receive a confirmation email within 24 hours.<br><br>
+    Is there anything else I can help you with regarding your benefits or payroll?
+  </div>`,
+  
+  // Step 4: Final response
+  `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+    <strong>UKG Assistant:</strong> You're all set! Have a wonderful day, and remember I'm here whenever you need assistance with HR, payroll, or benefits questions.
+  </div>`
+];
+
+const expectedInputs = [
+  "How much money do I have left to contribute to my 401K and can you maximize my contribution?",
+  "Yes",
+  "Option 1",
+  "No"
+];
+
+function sendMessage() {
+  const input = document.getElementById('userInput');
+  const container = document.getElementById('chatContainer');
+  const message = input.value.trim();
+  
+  if (!message) return;
+  
+  // Add user message
+  container.innerHTML += `
+    <div style="text-align: right; margin-bottom: 15px;">
+      <div style="background-color: #e8f4fd; color: #2c3e50; padding: 12px; border-radius: 8px; display: inline-block; max-width: 70%; border: 1px solid #d1e7dd;">
+        <strong>You:</strong> ${message}
+      </div>
+    </div>`;
+  
+  // Generate dynamic response based on user input
+  setTimeout(() => {
+    let response = '';
+    
+    // Check for 401K related queries
+    if (message.toLowerCase().includes('401') || message.toLowerCase().includes('contribute')) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Absolutely! I'd be happy to help optimize your 401K contributions. Would you like me to analyze your current situation and provide you with some options?
+      </div>`;
+    }
+    // Check for affirmative responses
+    else if (message.toLowerCase().includes('yes') || message.toLowerCase().includes('sure')) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Perfect! Let me review your current situation.<br><br>
+        <strong>Your Current 401K Status:</strong><br>
+        • 2025 contribution limit: <strong>$23,500</strong><br>
+        • Your contributions so far: <strong>$21,500</strong><br>
+        • Remaining contribution capacity: <strong style="color: #2c3e50;">$2,000</strong><br><br>
+        Here are your optimization options:<br><br>
+        <strong>1.</strong> Distribute $2,000 evenly across your remaining 4 pay periods ($500 each)<br>
+        <strong>2.</strong> Make a lump sum contribution of $2,000 from your next paycheck<br>
+        <strong>3.</strong> Set up automatic optimization for 2026 to maximize contributions from January<br><br>
+        How would you like me to proceed?
+      </div>`;
+    }
+    // Check for Option 1
+    else if (message.toLowerCase().includes('option 1') || message.toLowerCase().includes('1') && !message.toLowerCase().includes('option 2')) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Excellent choice! I'll set up the even distribution of $500 per pay period to maximize your 2025 contributions. This ensures you capture the full employer match while maintaining steady cash flow.<br><br>
+        I've submitted the payroll adjustment request and you'll see the changes starting with your next paycheck. You should receive a confirmation email within 24 hours.<br><br>
+        Is there anything else I can help you with regarding your benefits or payroll?
+      </div>`;
+    }
+    // Check for Option 2
+    else if (message.toLowerCase().includes('option 2') || (message.toLowerCase().includes('2') && message.toLowerCase().includes('lump'))) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Great choice! I'll set up the lump sum contribution of $2,000 from your next paycheck. This will immediately maximize your 2025 contributions and ensure you don't miss out on any employer matching.<br><br>
+        Please notes: This will reduce your next paycheck by $2,000. I've processed the request and you'll see this deduction on your [next pay date]. You should receive a confirmation email within 24 hours.<br><br>
+        Is there anything else I can help you with regarding your benefits or payroll?
+      </div>`;
+    }
+    // Check for Option 3
+    else if (message.toLowerCase().includes('option 3') || (message.toLowerCase().includes('3') && message.toLowerCase().includes('2026'))) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Smart planning! I'll set up automatic optimization for 2026 to ensure you maximize your contributions from January 1st.<br><br>
+        For 2026, I'll configure your payroll to contribute $903.85 per pay period (for 26 pay periods), which will get you to the maximum $23,500 by year-end. This also leaves room for any mid-year limit increases.<br><br>
+        You'll receive a summary of the 2026 contribution plan via email, and I'll send you a reminder in December. For now, would you still like me to handle the remaining $2,000 for 2025?
+      </div>`;
+    }
+    // Check for negative responses
+    else if (message.toLowerCase().includes('no') || message.toLowerCase().includes('nothing') || message.toLowerCase().includes('that\'s all')) {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> You're all set! Have a wonderful day, and remember I'm here whenever you need assistance with HR, payroll, or benefits questions.
+      </div>`;
+    }
+    // Default response for other inputs
+    else {
+      response = `<div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> I can help with HR, payroll, and benefits questions. Try asking about your 401K contributions, vacation time, or payroll deductions!
+      </div>`;
+    }
+    
+    container.innerHTML += `<div style="text-align: left; margin-bottom: 15px;">${response}</div>`;
+    container.scrollTop = container.scrollHeight;
+  }, 1000);
+  
+  input.value = '';
+  container.scrollTop = container.scrollHeight;
+}
+
+function resetDemo() {
+  conversationStep = 0;
+  const container = document.getElementById('chatContainer');
+  const input = document.getElementById('userInput');
+  
+  container.innerHTML = `
+    <div style="text-align: left; margin-bottom: 15px;">
+      <div style="background-color: #f8f9fa; padding: 12px; border-radius: 8px; border-left: 4px solid #2c3e50; display: inline-block; max-width: 80%;">
+        <strong>UKG Assistant:</strong> Good morning! I'm here to help with your HR and benefits questions. What can I assist you with today?
+      </div>
+    </div>`;
+  
+  input.disabled = false;
+  input.placeholder = "Ask about your 401K...";
+  input.value = "";
+}
+</script>
+```
+
+::: notes
+(Lead-in to demo): To ground our discussion, let's consider a practical example of an AI interaction within the UKG context. Imagine an interactive demonstration here, illustrating a common scenario: an AI assistant helping an employee with a 401K query. As you would interact with such a demo, the key is to consider the potential touchpoints for both satisfaction and friction.
+
+(Spoken narrative during/after an actual demo would be): This type of interaction, when seamless, provides immense value. But what happens when the AI misunderstands, when the options aren't clear, or when the user feels a lack of trust? How do we systematically identify those friction points at scale and ensure the AI is consistently delivering on its promise? This is where a robust quantitative UX research strategy becomes indispensable. It allows us to move from anecdotal evidence or individual usability sessions to a broad, statistically sound understanding of the AI's performance in the wild. This is precisely the challenge the following case study addresses.
+:::
+
+## From AI Demonstration to User Experience Insights {.incremental}
+
+Moving beyond basic AI functionality requires sophisticated measurement of user experience. This **Aspect-Based Sentiment Analysis** (ABSA) approach identifies specific friction points in AI interactions by measuring sentiment across dimensions like 'task success,' 'clarity,' and 'trust.' This precision allows targeted improvements that increase customer satisfaction and reduce support costs. For UKG, this methodology provides a framework to enhance AI assistant interactions, create differentiated experiences, and demonstrate ROI through measurable gains in both efficiency and satisfaction.
+
+::: notes
+The AI assistant demonstration we just (conceptually) walked through highlights the immense potential of AI. However, to ensure such AI interactions consistently create value, drive user satisfaction, and improve efficiency across UKG's vast user base, we need to **delve deeper than a simple 'thumbs up' or 'thumbs down' after an interaction.** We need to understand the *quality* of that interaction in a measurable way.
+
+This is where **Aspect-Level Sentiment Analysis (ABSA)** emerges as a powerful strategic tool. It allows us to dissect the user experience with surgical precision. Instead of just asking "Was the AI interaction effective?", which might give us a general satisfaction score but lacks diagnostic power, ABSA enables us to pinpoint *exactly* where users encounter friction or achieve success. For example, are users struggling with the 'clarity of explanation' the AI provides, is there a 'lack of trust in its recommendations,' or are they highly satisfied with 'task completion' speed and accuracy? By defining and tracking these aspects, we are essentially creating nuanced **Key Performance Indicators (KPIs)** for the conversational experience itself.
+
+Through this granular lens, we can uncover specific points of confusion (which might increase **time on task** or **user error rates**), identify areas where trust in AI-driven recommendations is weak, or conversely, pinpoint aspects that contribute to high satisfaction and successful **conversion rates** for desired actions.
+
+**For UKG:** The rigorous, quantitative methodology I'm about to detail in the IRS chatbot case study—which used ABSA to understand and improve interactions—offers a proven framework to optimize UKG's AI platforms. This ensures improvements are targeted, leading to measurable gains in employee satisfaction, reduced **drop-off rates** from complex AI-driven workflows, and enhanced HR operational efficiency.
+
+**The Strategic Advantage for UKG:** While competitors might rely on overall satisfaction scores (like a general **SUS** score) or periodic qualitative studies, this ABSA approach allows UKG to proactively identify, quantify, and address specific interaction pain points, often before they significantly impact adoption or escalate into widespread user frustration. This proactive, data-driven stance, focused on a suite of granular interaction **KPIs**, is key to maintaining leadership and ensuring a positive user experience in an AI-first landscape. It allows us to understand not just if users *can* complete a task, but how they *feel* about it, and whether they'd recommend the experience to others (tying into **NPS**).
+:::
+
+## Case Study 1<br>Enhancing Taxpayer Experience: An Aspect-Based Sentiment Analysis of IRS Chatbot Interactions
+
+## Introduction & Project Goals {.incremental}
+
+::::: columns
+::: {.column width="60%"}
+This project focused on the IRS's high-volume public chatbot, a critical support channel. The challenge was to understand nuanced UX drivers within millions of interactions beyond anecdotes. Our goal: employ Aspect-Based Sentiment Analysis (ABSA) to scientifically identify specific drivers of taxpayer satisfaction and frustration, delivering actionable insights for measurable improvements in chatbot effectiveness and efficiency.
+:::
+
+::: {.column width="40%"}
+![](chatbot.png){fig-alt="Screenshot of the IRS Automated Chat Bot interface, showing initial greeting and topic selection buttons like 'Refunds for Individuals'." width="100%"}
+:::
+:::::
+
+::: notes
+This first case study centered on a critical public interface: the IRS chatbot, a high-volume channel processing millions of taxpayer interactions annually. The core business **challenge** wasn't a lack of interaction data, but a lack of nuanced understanding of the user experience *within* those interactions.
+
+Our **Strategic Imperative** was to dissect a comprehensive dataset of these interactions to pinpoint the precise drivers of taxpayer experience. Simply knowing if an interaction was 'good' or 'bad' overall wasn't enough; we needed to understand the *why* at a component level to make targeted, impactful changes.
+
+Our **Core Objective & Methodological Innovation** was to deploy advanced data science techniques—specifically Aspect-Based Sentiment Analysis—to unearth actionable insights. The aim was clear: enhance chatbot effectiveness, boost taxpayer satisfaction, and identify opportunities for operational efficiencies by understanding sentiment at an exceptionally granular, aspect-specific level. This represented a significant step up in analytical maturity for understanding this channel.
+
+The **Impact Focus** was paramount: we weren't just analyzing data; we were building an evidence base to drive targeted improvements. This ensured that any changes made were data-driven and focused on areas with the highest potential positive impact on the taxpayer experience and, consequently, on agency efficiency. *(Four Cs: Counterfactual - Without this granular analysis, improvements would likely be based on broader, less precise feedback, leading to potentially misallocated resources and missed opportunities for significant UX gains and operational efficiencies.)*
+:::
+
+## Stakeholder Engagement & Alignment {.incremental}
+
+I directed cross-functional collaboration between IRS Account Management, IT, Privacy, Legal, and UX teams to ensure research directly served operational priorities. I established a governance structure that aligned research outputs with key business decisions through regular stakeholder reviews and clear success metrics. This approach included developing a mentorship program that elevated data literacy across teams, enabling broader application of quantitative insights throughout the organization.
+
+::: notes
+Understanding and improving the taxpayer experience with the IRS chatbot was not an isolated research endeavor; it was deeply embedded in organizational needs and required extensive, strategic stakeholder engagement from the outset, which I personally led and architected.
+
+My first crucial step in **Architecting Strategic Collaboration** was to orchestrate comprehensive engagement with a diverse array of key IRS divisions. This wasn't just a courtesy; it was foundational to the project's success. Key partners included Account Management leadership (who oversee Customer Service Representatives and hold invaluable front-line operational insights), IT (for understanding technical feasibility and ensuring seamless data access), the Privacy office (to ensure rigorous adherence to data protection mandates – a non-negotiable aspect), Governmental Liaison and Disclosure (for navigating policy implications), and, critically, the core IRS UX teams. This early and broad coalition-building was essential to define a project scope that was not only ambitious in its analytical goals but also tightly aligned with overarching agency strategic priorities and deeply grounded in operational realities. The explicit aim was to ensure the research would directly address known pain points, anticipate future needs, and secure robust buy-in from all parties who would be vital to acting on the findings. *(Four Cs: Collaboration, Communication)*
+
+Subsequently, I **Spearheaded an Iterative, Insight-Driven Process with Embedded Mentorship.** This involved designing and leading a series of discovery workshops and iterative analytical reviews. These sessions were deliberately structured as active working meetings, not passive report-outs, to foster shared understanding, facilitate co-creation of solutions, and ensure the analytical direction remained aligned with stakeholder needs. A key component of my leadership in this phase was to actively mentor the UX researchers and analysts on the team in the application, interpretation, and strategic communication of advanced analytical techniques like ABSA. Furthermore, I focused on elevating their ability to present complex findings to diverse stakeholder groups with clarity and impact. This dual focus on analytical rigor and effective communication was critical for enhancing overall data literacy within the involved teams and ensuring that our insights would be understood, trusted, championed, and ultimately, acted upon. *(Four Cs: Collaboration, Communication, Leadership/Mentorship)*
+:::
+
+## Methodology Overview {.incremental}
+
+Our approach centered on a **Data Foundation** of 100,000 anonymized Jan-May 2024 chatbot transcripts, rigorously preprocessed for privacy. We then applied **Aspect-Level Sentiment Analysis (ABSA)**. This involved a hybrid strategy for *Aspect Identification* (domain expertise + NLP/LDA for emergent themes) for comprehensive, data-driven insights, and used NLTK's VADER for nuanced *Sentiment Assignment* per aspect. Finally, **Quantitative Analysis** aggregated this data to pinpoint pain/success points, visualized for actionable recommendations.
+
+::: notes
+To achieve our goal of extracting granular, actionable insights from the vast dataset of taxpayer-chatbot interactions, I designed and oversaw a multi-stage quantitative methodology, prioritizing rigor, taxpayer privacy, and analytical depth.
+
+**1. Foundational Data Asset Acquisition & Curation:** The project was built upon a substantial and relevant dataset: **100,000 anonymized chatbot interaction transcripts**. These were strategically extracted from the IRS Compliance Data Warehouse, specifically covering the recent February through April 2025 filing season. *The strategic decision here was to use current data that could reliably power advanced NLP techniques and yield statistically significant findings directly applicable to the present-day chatbot experience.* A critical, non-negotiable component of this stage, which I personally ensured, was the implementation of **rigorous preprocessing protocols**. This involved more than just standard text cleaning and normalization; it included meticulous, multi-layered de-identification processes to absolutely safeguard taxpayer privacy. *This ensured ethical data handling and full compliance from the outset, a crucial step when dealing with sensitive information at this scale. (Four Cs: Challenges - Managing and ensuring the complete anonymization of a large, unstructured dataset was a significant operational hurdle we successfully navigated).*
+
+**2. Core Analytical Engine: Aspect-Level Sentiment Analysis (ABSA):** This was the heart of our analytical strategy. *ABSA was chosen over simpler overall sentiment analysis because of its unique ability to dissect conversations into meaningful components and assign sentiment to those specific parts, offering a much deeper and more actionable understanding of the user experience.* \* **Aspect Identification – A Hybrid, Data-Driven Strategy**: To truly understand *what specific topics* taxpayers were discussing within their conversations, we employed a sophisticated hybrid strategy which I designed. We began by leveraging existing **domain expertise** from Account Management and frontline UX teams to define a set of core, known service aspects (e.g., 'Refund Status', 'Form Guidance'). However, to avoid confirmation bias and critically, to uncover *emergent themes* not previously identified, we augmented this with **Natural Language Processing (NLP) techniques, specifically Latent Dirichlet Allocation (LDA)**. *The 'why' for this hybrid approach was strategic: it allowed the data itself to reveal unanticipated conversational themes, ensuring our aspect framework was both comprehensive (covering known issues) and empirically grounded (discovering unknown issues). This is more robust than relying solely on predefined categories or unguided topic modeling.* \* **Sentiment Assignment – Leveraging Validated Lexicons**: For assigning sentiment polarity (positive, negative, neutral) to each identified aspect within an utterance, we utilized **NLTK's VADER (Valence Aware Dictionary and sEntiment Reasoner)**. *VADER was selected due to its proven efficacy with social media-style short texts, like chatbot utterances. Its lexicon-based approach, which also considers linguistic rules like negation and intensifiers, provided a consistent, transparent, and defensible method for sentiment scoring, offering more nuance than simpler keyword-spotting techniques.*
+
+**3. Quantitative Analysis & Strategic Insight Generation:** The real power of this methodology came from aggregating the identified aspects and their associated sentiment scores across the entire dataset. This enabled us to **quantify trends with statistical confidence**, systematically pinpoint specific taxpayer pain points (i.e., aspects with high negative sentiment concentration), and, equally importantly, identify areas of notable success or positive user experience. A key deliverable, for which I defined the requirements and oversaw development, was the creation of **clear, compelling visualizations**. *These weren't just charts for the sake of data presentation; they were carefully designed communication tools intended to translate complex quantitative findings into an accessible narrative. This was vital for supporting data-driven recommendations for chatbot improvement and for enabling informed decision-making by diverse stakeholder groups.* *(Four Cs: Communication, Impact)*
+:::
+
+## Stakeholder & Analytical Workflow
+
+```{=html}
+<div class="workflow-diagram" style="font-family: Avenir, sans-serif !important; margin-top: 150px !important; font-size: 0.75em !important;"> 
+  <div style="display: flex !important; justify-content: space-around !important; align-items: flex-start !important; text-align: center !important; position: relative !important;">
+    <div class="workflow-line" style="position: absolute !important; top: 15px !important; left: 10% !important; width: 80% !important; height: 1px !important; background-color: #2c3e50 !important; z-index: 0 !important;"></div>
+    
+    <div class="workflow-phase fragment" data-fragment-index="3" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone" style="width: 30px !important; height: 30px !important; background-color: #e8f4fd !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">1</div>
+      <h6 style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Strategic Alignment</h6>
+      <p style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Cross-team workshops (IRS SMEs, UX, IT). Scope & define research questions. Secure buy-in.</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Weeks 1-3)</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Agreed Scope</p>
+    </div>
+    
+    <div class="workflow-phase fragment" data-fragment-index="4" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone" style="width: 30px !important; height: 30px !important; background-color: #e8f4fd !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">2</div>
+      <h6 style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Data Prep & Initial Model</h6>
+      <p style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Extract & anonymize 100k transcripts. Initial NLP (LDA) exploration.</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Week 3)</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Clean Data, Draft Aspects</p>
+    </div>
+    
+    <div class="workflow-phase fragment" data-fragment-index="5" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone" style="width: 30px !important; height: 30px !important; background-color: #e8f4fd !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">3</div>
+      <h6 style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Iterative Analysis & Review 1</h6>
+      <p style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Refine LDA, VADER sentiment. Present initial findings to stakeholders for feedback.</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Week 4)</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Validated Aspects</p>
+    </div>
+    
+    <div class="workflow-phase fragment" data-fragment-index="6" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone" style="width: 30px !important; height: 30px !important; background-color: #e8f4fd !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">4</div>
+      <h6 style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Deep Dive & Review 2</h6>
+      <p style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Sentiment by task/aspect. Correlate with surveys. Present detailed findings & draft recommendations.</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Week 4)</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Prioritized Insights</p>
+    </div>
+    
+    <div class="workflow-phase fragment" data-fragment-index="7" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone" style="width: 30px !important; height: 30px !important; background-color: #e8f4fd !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">5</div>
+      <h6 style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Final Synthesis & Delivery</h6>
+      <p style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Develop actionable UX roadmap. Create compelling visualizations & strategic narrative. Present to executives.</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Week 5)</p>
+      <p class="output-text" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Actionable Roadmap</p>
+    </div>
+  </div>
+</div>
+```
+
+## Overall Transcript Sentiment
+
+::::: columns
+::: {.column width="50%"}
+**Categorical Sentiment**
+
+![](transcript_categorical_sentiment_dist_pct.png){fig-alt="Bar chart showing overall sentiment of taxpayer transcripts: 76.6% Positive, 11.2% Neutral, 12.0% Negative" width="100%"}
+
+*Initial View: Majority (76.6%) positive, yet nearly 1 in 4 interactions are neutral or negative, highlighting significant areas for targeted improvement.*
+:::
+
+::: {.column width="50%"}
+**Continuous Sentiment Distribution**
+
+![](transcript_continuous_sentiment_dist.png){fig-alt="Histogram of continuous VADER sentiment scores (-1 to 1). Shows a strong peak in positive scores (around +0.8 to +0.9), a smaller peak around neutral (0.0), and a tail towards negative scores." width="100%"}
+
+*Deeper Dive: Confirms positive skew but reveals distinct neutral and negative clusters, underscoring the need for granular analysis beyond aggregates.*
+:::
+:::::
+
+::: notes
+Our initial high-level analysis of the 100,000 transcripts provides a foundational understanding of the overall sentiment landscape.
+
+The **Categorical Sentiment** breakdown on the left gives us the 30,000-foot view. It reveals that while a significant majority – 76.6% – of chatbot interactions are broadly classified as positive, nearly a quarter (a combined 23.2%) are either neutral or negative. This immediately signals that while the chatbot often performs well, there are substantial opportunities for targeted improvement. We can't be satisfied when almost 1 in 4 interactions are not clearly positive.
+
+The **Continuous Sentiment Distribution** on the right allows for a more nuanced interpretation. This histogram of VADER scores confirms the strong positive skew we saw categorically. However, it also visually highlights distinct clusters of interactions around a neutral sentiment and a notable tail extending into varying degrees of negativity. This tells us that the "positive" experiences are not uniformly so, and the "negative" experiences have different intensities. More importantly, this variability reinforces the strategic decision to go deeper with Aspect-Based Sentiment Analysis, as these aggregate views can mask critical underlying issues. We need to understand the *drivers* of these different sentiment clusters.
+:::
+
+## Transcript Sentiment Over Time
+
+**Average Sentiment Trend (Weekly)**
+
+::: figure
+![](transcript_sentiment_over_time_weekly.png){fig-align="center" fig-alt="Line graph: Average VADER compound score per week. The line hovers consistently between 0.4 and 0.55, indicating stable, generally positive sentiment over the observed period." width="80%"}
+:::
+
+*Temporal Stability: Average taxpayer sentiment (VADER 0.4-0.55) remained consistently positive and stable on a weekly basis throughout the Jan 2024-May 2024 analysis period. This stability allows us to attribute sentiment variations more directly to interaction quality rather than major external temporal shifts.*
+
+::: notes
+To understand if major external factors or system-wide events during the collection period might be influencing overall sentiment, we tracked the average VADER compound score on a weekly basis. This analysis covers the February through April 2025 filing season.
+
+As the line graph shows, taxpayer sentiment in chatbot interactions remained consistently positive and remarkably stable throughout this period. Fluctuations were minor, with average scores generally hovering between a VADER compound score of 0.4 and 0.55.
+
+The key strategic takeaway here is this **temporal stability**. It suggests that no major widespread service degradations or significant positive external events during this period drastically swayed overall sentiment. This baseline stability is important because it allows us, as we drill down into more granular analyses like ABSA, to more confidently attribute variations in sentiment to the specific content and quality of the interactions themselves, rather than to broad, time-based confounding variables. It provides a controlled backdrop for our deeper investigation.
+:::
+
+## Survey Insights - Satisfaction & Trust
+
+::::: columns
+::: {.column width="50%"}
+**Overall Satisfaction Ratings (Survey)**
+
+![](survey_overall_satisfaction_dist_pct.png){fig-alt="Bar chart: Survey Overall Satisfaction ratings. 'Very Satisfied (5)' at 27.1%, 'Neutral (3)' at 26.8%, 'Satisfied (4)' at 24.6%. Dissatisfied categories are lower." width="100%"}
+
+*Survey Validation: Over 50% report satisfaction, yet a substantial 26.8% "Neutral" highlights a key opportunity to convert indifference into positive engagement.*
+:::
+
+::: {.column width="50%"}
+**Trust Ratings (Survey)**
+
+![](survey_trust_dist_pct.png){fig-alt="Bar chart: Survey Trust ratings. 'Strongly Agree (5)' with trust statements at 28.1%, 'Agree (4)' at 25.1%. Disagree categories are smaller." width="100%"}
+
+*Trust Levels: A majority express trust, aligning with satisfaction. Again, neutral responses signal an area where confidence can be further solidified.*
+:::
+:::::
+
+::: notes
+To triangulate the insights from our transcript analysis and provide a more holistic view of the user experience, we also examined related survey data collected from taxpayers post-interaction.
+
+Looking at **Overall Satisfaction Ratings** from these surveys (left chart), we see that over half of the respondents report a positive experience, with 27.1% being "Very Satisfied" and 24.6% "Satisfied." However, what's strategically important is the significant percentage – 26.8% – who remain "Neutral." This neutrality is a critical segment; it can indicate indifference, a task completed without any notable positive or negative experience, or perhaps an experience that wasn't frustrating but also wasn't particularly helpful or delightful. This large neutral bloc represents a key opportunity: targeted improvements could potentially shift these users decisively into the satisfied categories.
+
+Turning to **Trust Ratings** (right chart), the data indicates that a similar majority of surveyed taxpayers express trust in the information and services provided by the chatbot, with 28.1% "Strongly Agreeing" and 25.1% "Agreeing" with trust-related statements. This generally aligns with the satisfaction levels we observed. Once again, the presence of a notable neutral segment suggests that while outright distrust is low, there's a clear opportunity to more actively build and solidify taxpayer confidence in the chatbot's capabilities, accuracy, and reliability. These survey findings help contextualize what we see in the transcript data.
+:::
+
+## Survey Insights - Understanding (Continued)
+
+**Understanding Ratings (Survey)**
+
+::: figure
+![](survey_understanding_dist_pct.png){fig-align="center" fig-alt="Bar chart: Survey Understanding ratings. 'Agree (4)' (that they understood) at 36.3% and 'Strongly Agree (5)' at 25.3%. Disagree categories are smaller." width="80%"}
+:::
+
+*Clarity Check: Most users (61.6% Agree/Strongly Agree) report understanding chatbot information. This is positive, yet a notable portion still lacks full clarity, flagging this as a key area for ABSA investigation.*
+
+::: notes
+Continuing with our survey insights, we examined self-reported understanding.
+
+The data (center chart) is encouraging: a significant majority of respondents report understanding the information provided by or during their interaction with the chatbot, with 36.3% "Agreeing" and 25.3% "Strongly Agreeing" that they understood. This is a positive indicator for the general clarity of the chatbot's communication.
+
+However, from a strategic standpoint, this also means that for nearly 40% of users, understanding wasn't rated as high. This highlights an ongoing need to refine language, simplify complex tax concepts, and ensure interaction flows are intuitive to maximize comprehension for *all* user segments. This finding flags "clarity" as a dimension that warrants close attention in our subsequent aspect-based analysis of the transcripts themselves. It primes us to look for specific points of confusion.
+:::
+
+## Satisfaction vs. Transcript Sentiment
+
+**Correlating Survey Satisfaction with Chatbot Sentiment**
+
+::: figure
+![](survey_satisfaction_vs_transcript_sentiment.png){fig-align="center" fig-alt="Box plot: Overall satisfaction rating vs. transcript sentiment. Positive sentiment transcripts clearly show higher median satisfaction ratings compared to neutral and negative sentiment transcripts." width="80%"}
+:::
+
+*Crucial Validation: A strong positive correlation exists between automated transcript sentiment (VADER) and self-reported survey satisfaction. This validates our ABSA's ability to accurately reflect true user experience, a key methodological checkpoint.*
+
+::: notes
+This slide presents a critical piece of methodological validation for our entire approach. Here, we correlated the automated VADER sentiment scores derived from the 100,000 chatbot transcripts with the self-reported overall satisfaction ratings from subsequent taxpayer surveys.
+
+The box plot clearly demonstrates a strong, positive correlation: transcripts that our ABSA model identified as having more positive sentiment are indeed associated with significantly higher median satisfaction ratings from actual users. Conversely, transcripts flagged with neutral or negative sentiment correlate with lower self-reported satisfaction.
+
+This is a pivotal finding for two strategic reasons: 1. **Validation of ABSA as a Proxy for UX:** It provides strong empirical evidence that our automated sentiment analysis of the transcripts is a reliable proxy for actual user satisfaction. This builds significant confidence in the validity and applicability of the insights derived directly from the transcript data itself. 2. **Reinforces Strategic Importance of Conversational Quality:** It underscores the business value of improving the specific aspects that drive positive sentiment within the chatbot interactions, as these are demonstrably linked to how satisfied taxpayers feel. This provides a clear mandate to focus on the quality and nuances of the conversational experience. *(Four Cs: Counterfactual - Without this validation, stakeholders might remain skeptical about whether automated sentiment analysis truly reflects user feelings or if it's just an academic exercise. This shows a clear link to self-reported experience.)*
+:::
+
+## Sentiment in Survey Open Follow-up
+
+**Sentiment of Open Follow-up Text (Survey)**
+
+::: figure
+![](survey_open_follow_up_sentiment_pct.png){fig-align="center" fig-alt="Bar chart: Sentiment of survey open follow-up text. Positive at 67.5%, Neutral at 27.2%, Negative at 5.3%." width="75%"}
+:::
+
+*Qualitative Corroboration: Sentiment analysis of users' open-ended survey comments aligns with transcript findings (67.5% positive), strengthening confidence in the overall patterns identified and providing rich contextual data.* :::
+
+::: notes
+To further enrich our understanding and add another layer of validation, we analyzed the sentiment of the qualitative, open-ended follow-up comments provided by taxpayers in the surveys. This allows us to tap into the users' own words.
+
+The results here are compelling and corroborative: 67.5% of these open-ended comments were classified as positive using sentiment analysis, with 27.2% neutral, and only a small fraction (5.3%) negative. This distribution largely mirrors the sentiment patterns we observed in the much larger dataset of the chatbot transcripts themselves.
+
+This **convergence of findings** from two different data sources – the automated analysis of 100,000 interaction transcripts and the sentiment analysis of user-written qualitative feedback – significantly strengthens our confidence in the overall results. It suggests that the patterns we're observing are robust and reflective of genuine user experiences. Furthermore, these open-ended comments will provide invaluable qualitative context for the "why" behind the sentiment scores when we delve into thematic analysis.
+:::
+
+## Voice of the Taxpayer - All Open Feedback
+
+**Word Cloud: All Survey Open Follow-up Feedback**
+
+::: figure
+![](wordcloud_open_follow_up_all_feedback.png){fig-align="center" fig-alt="Word cloud from all survey open follow-up text. Prominent words: 'helpful', 'great', 'quick', 'solved', 'issue', 'improvement', 'needed', 'efficient', 'information'." width="90%"}
+:::
+
+*Direct User Voice: Key themes from taxpayers' own words highlight positives like "helpful," "quick," and "solved issue." However, terms like "improvement needed" and "information" signal clear areas for focused enhancement and investigation.*
+
+::: notes
+This word cloud, generated from *all* open-ended survey feedback, provides a direct, unfiltered glimpse into the "Voice of the Taxpayer." It visually represents the most frequently used terms, offering a high-level map of user preoccupations.
+
+We see strong positive indicators: words like "helpful," "great," "quick," "solved," and "efficient" are prominent. This suggests that when the chatbot functions as intended, users recognize and appreciate its speed and effectiveness in resolving their issues. These are clear markers of success.
+
+However, terms such as "improvement," "needed," and the general term "information" also stand out significantly. This signals that while there are successes, users are also explicitly articulating a need for enhancements and may sometimes struggle to find the specific information they require or feel that aspects of the service could be better. This word cloud serves as an initial guidepost, directing us toward a deeper qualitative analysis of these comments, which we will explore by segmenting the feedback into positive and negative themes next.
+:::
+
+## Voice of the Taxpayer - Positive vs. Negative
+
+::::: columns
+::: {.column width="50%"}
+**Positive Open Feedback Themes (Survey)**
+
+![](wordcloud_open_follow_up_positive_feedback.png){fig-alt="Word cloud from positive survey open follow-up text. Prominent words: 'helpful', 'great', 'quick', 'solved', 'efficient', 'easy', 'perfectly', 'worked'." width="100%"}
+
+*Drivers of Satisfaction: Efficiency ("quick," "efficient"), successful resolution ("solved," "worked"), ease of use ("easy"), and general helpfulness are consistently highlighted in positive user comments.*
+:::
+
+::: {.column width="50%"}
+**Negative Open Feedback Themes (Survey)**
+
+![](wordcloud_open_follow_up_negative_feedback.png){fig-align="center" fig-alt="Word cloud from negative survey open follow-up text. Prominent words: 'didn't work', 'provided wrong', 'links', 'trust', 'sure', 'answers', 'failed', 'page', 'frustrating'." width="100%"}
+
+*Key Pain Points: Unresolved issues ("didn't work," "failed"), concerns about accuracy ("provided wrong"), technical problems ("links," "page"), trust erosion, and overall frustration dominate negative feedback.*
+:::
+:::::
+
+::: notes
+Segmenting the open-ended feedback into positive and negative comments allows for a much clearer and more actionable understanding of the specific drivers behind user sentiment.
+
+**Positive Themes (left cloud):** When taxpayers are pleased with their interaction, their comments frequently emphasize several key themes: **efficiency** (evidenced by terms like "quick," "efficient"), **successful resolutions** (with words like "solved," "worked," "perfectly" appearing often), **ease of use** ("easy"), and the overall **helpful nature** of the interaction. These are the qualities we want to understand, replicate, and amplify across all chatbot interactions, as they clearly represent the chatbot delivering on its core promise and meeting user needs effectively.
+
+**Negative Themes (right cloud):** Conversely, the themes emerging from negative feedback highlight critical areas requiring immediate attention. These often center on **unresolved issues** (indicated by "didn't work," "failed"), concerns about the **accuracy or relevance of information** provided ("provided wrong," "answers"), problems with **technical execution** such as broken "links" or non-functional "page" elements, and a general sense of **frustration**. Worryingly, words like "trust" and "sure" (often appearing in a negative context like "not sure" or "didn't trust") also surface, indicating that some interactions may be actively eroding user confidence. These themes pinpoint specific areas for investigation and remediation. *(Four Cs: Challenges - These negative themes often point to deeper issues that may require not just UX design fixes but also backend data integrity checks, logic improvements in the chatbot's NLU, or better content governance.)*
+:::
+
+## Top Identified Taxpayer Tasks
+
+**Frequency of Key Taxpayer Tasks in Transcripts**
+
+::: figure
+![](identified_task_frequency_pct.png){fig-align="center" fig-alt="Horizontal bar chart: Top 10 Identified Taxpayer Tasks. 'General Inquiry' (41.2%) is most frequent, then 'Navigating Website' (10.5%), 'Understanding Tax Forms' (8.4%)." width="90%"}
+:::
+
+*Task Landscape: "General Inquiry" (41.2%) dominates, highlighting a critical need for effective chatbot intent recognition and triage. "Navigating Website" (10.5%) and "Understanding Tax Forms" (8.4%) are also significant drivers of chatbot usage, pointing to key areas for support optimization.*
+
+::: notes
+Using our hybrid approach of domain expertise combined with NLP topic modeling (LDA) on the 100,000 transcripts, we identified and quantified the primary tasks taxpayers were attempting to accomplish when interacting with the chatbot.
+
+The most striking finding from this analysis is that **"General Inquiry"** constitutes the largest single category, accounting for 41.2% of interactions. This is a significant insight: it suggests that many users initiate conversations with broad or poorly defined questions, or they may not be sure how to categorize their specific issue. This places a substantial burden on the chatbot's ability to effectively understand user intent early in the conversation and accurately triage the user to the correct information or specialized sub-flow. Improving this initial interaction phase is clearly a high-priority area.
+
+Beyond these general queries, **"Navigating IRS Website"** (10.5%) and **"Understanding Tax Forms"** (8.4%) also emerge as highly frequent tasks. This tells us that users often turn to the chatbot for direct assistance with the primary IRS digital property (IRS.gov) and for help interpreting complex tax documentation. The prevalence of these specific tasks helps us prioritize which knowledge domains and conversational flows within the chatbot require the most focused attention and refinement to better serve user needs.
+:::
+
+## Sentiment by Taxpayer Task
+
+**Transcript Sentiment by Top Identified Tasks**
+
+::: figure
+![](sentiment_by_identified_task_pct.png){fig-align="center" fig-alt="Stacked horizontal bar chart: Sentiment distribution by top 8 tasks. 'Notices/Letters' (85.8% positive), 'Change Of Address' (82.9% positive). 'Understanding Tax Forms' has 20.6% negative, 'Making A Tax Payment' 19.3% negative." width="100%"}
+:::
+
+*Targeted Intervention Areas: Sentiment varies significantly by task. While "Notices/Letters" interactions are highly positive (85.8%), critical tasks like "Understanding Tax Forms" (20.6% negative) and "Making A Tax Payment" (19.3% negative) exhibit notable negative sentiment, pinpointing specific user journeys ripe for immediate UX improvement.*
+
+::: notes
+This view is where our analysis starts to yield highly actionable, strategic insights. By cross-referencing the sentiment scores with the identified taxpayer tasks, we can move beyond overall averages and see precisely which user journeys are causing the most friction and which are performing well.
+
+The data shows that while tasks related to **"Notices/Letters"** (85.8% positive) and **"Change Of Address"** (82.9% positive) garner high positive sentiment – indicating these are areas where the chatbot generally performs effectively – other critical tasks reveal significant challenges.
+
+Specifically, **"Understanding Tax Forms"** has a concerning 20.6% negative sentiment, and **"Making A Tax Payment"** isn't far behind with 19.3% negative sentiment. These are core taxpayer obligations, and negative experiences during these interactions can lead to significant user frustration, errors in compliance, and an increased load on more expensive assisted support channels like phone lines. This data allows us to pinpoint exactly which task-specific conversation flows require urgent review and redesign from both a UX and content strategy perspective. *(Four Cs: Impact - This directly informs resource allocation, ensuring that development and design efforts are focused on areas with the highest potential for improving user experience, operational efficiency, and taxpayer compliance.)*
+:::
+
+## Top Identified Conversation Aspects
+
+**Frequency of Key Conversation Aspects**
+
+::: figure
+![](identified_aspect_frequency_pct.png){fig-align="center" fig-alt="Horizontal bar chart: Top 10 Identified Conversation Aspects. 'General' (37.0%) is highest, followed by 'Clarity Of Instruction' (23.5%) and 'Resolution Success' (13.6%)." width="90%"}
+:::
+
+*Granular Focus: Beyond broad tasks, specific conversational "Aspects" (themes) emerge from the data. "Clarity Of Instruction" (23.5%) and "Resolution Success" (13.6%) are frequently discussed, highlighting their central importance in shaping the overall user experience and satisfaction.*
+
+::: notes
+Moving beyond the high-level tasks users are trying to complete, our Aspect-Based Sentiment Analysis (ABSA) allowed us to identify the more granular components or themes *within* the conversations that users implicitly or explicitly commented on or reacted to. These are the "aspects" of the interaction.
+
+Apart from a "General" discussion aspect (37.0%), which naturally captures parts of conversations not fitting a more specific, defined theme, **"Clarity Of Instruction"** stands out as a very frequently discussed aspect, appearing in 23.5% of conversations. This is a critical finding: it means that in nearly a quarter of all interactions, the comprehensibility and actionability of the chatbot's guidance is a salient feature, for better or worse.
+
+**"Resolution Success"** (13.6%) is also a prominent aspect, indicating that users often refer to whether their underlying issue was actually solved by the interaction. The high frequency of these, and other identified aspects, underscores their critical role in the overall user experience. Understanding the sentiment associated with these most frequent aspects is the key to unlocking targeted and effective improvements, as we'll see next.
+:::
+
+## Sentiment by Conversation Aspect
+
+**Transcript Sentiment by Top Identified Aspects**
+
+::: figure
+![](sentiment_by_identified_aspect_pct.png){fig-align="center" fig-alt="Stacked horizontal bar chart: Sentiment distribution by top 8 aspects. 'Resolution Success' (99.3% positive). 'Ease Of Use' (88.8% negative). 'Clarity Of Instruction' (28.6% negative), 'Form Guidance' (22.1% negative)." width="100%"}
+:::
+
+*The Core Diagnostic: "Ease Of Use" shows overwhelming negative sentiment (88.8%). Critically, "Clarity of Instruction" (28.6% negative) & "Form Guidance" (22.1% negative) also carry significant friction. This occurs even when overall "Resolution Success" is high (99.3% positive), pinpointing specific UX failures previously masked by task completion rates.*
+
+::: notes
+This slide reveals the most critical diagnostic insights from our Aspect-Based Sentiment Analysis. When we analyze sentiment *by these specific conversational aspects*, we uncover nuanced and sometimes counterintuitive findings that are immensely valuable for prioritization.
+
+The most alarming finding is for the aspect of **"Ease Of Use,"** which is associated with an overwhelming 88.8% negative sentiment. This is a major red flag. It strongly suggests that even if users eventually get their answer or complete their task, the *process* of interacting with the chatbot for certain aspects is perceived as difficult, cumbersome, or frustrating.
+
+Furthermore, **"Clarity of Instruction"** carries a significant 28.6% negative sentiment, and **"Form Guidance"** (often related to understanding specific tax forms) shows 22.1% negative sentiment. These represent substantial areas of friction where users are struggling to understand or act upon the information provided.
+
+Interestingly, the aspect of **"Resolution Success"** is overwhelmingly positive at 99.3%. This creates a fascinating and strategically important tension: users often report that their issue was ultimately resolved, but they encountered significant difficulties with ease of use and clarity along the way. This is a classic scenario where looking *only* at overall task completion or resolution rates would completely mask significant underlying UX problems. The ABSA methodology allows us to identify these hidden pain points and understand that 'resolved' does not always mean 'well-served.' *(Four Cs: Counterfactual - Without ABSA, the organization might incorrectly believe the chatbot is performing exceptionally well based on high "Resolution Success" rates alone, thereby missing critical opportunities to reduce user effort, minimize frustration, and improve overall service quality. These findings provide precise targets for UX improvements that would otherwise be invisible.)*
+:::
+
+## Actionable UX Recommendations {.incremental}
+
+Key actions emerged from this analysis:
+
+  - **Ease of Use Overhaul (High Priority):** Investigate and redesign problematic flows, UI, and error handling due to extreme (88.8%) negative sentiment. Success here is crucial.
+  - **Boost Clarity & Guidance:** Refine chatbot responses for "Clarity of Instruction" & "Form Guidance" (especially tax forms, payments) with simpler language and A/B testing.
+  - **Improve High-Friction Tasks:** Focus UX efforts on "Understanding Tax Forms" & "Making a Tax Payment."
+  - **Implement Feedback Loop:** Systematically act on negative open feedback (broken links, accuracy) to build trust.
+  - **Scale Successes:** Replicate positive patterns from "Notices/Letters" to other areas.
+
+::: notes
+Based on the robust quantitative findings from the Aspect-Based Sentiment Analysis, I formulated and prioritized the following strategic, data-driven UX recommendations. The overarching goal was to address the identified pain points and leverage areas of existing strength, all while keeping an eye on improving key UX **KPIs**.
+
+1.  **Ease of Use Overhaul (High Priority):** The alarming 88.8% negative sentiment associated with "Ease Of Use" makes this the top priority. My recommendation was to immediately initiate a dedicated investigation. This would involve targeted usability testing on the specific interaction flows identified by ABSA, detailed journey mapping to pinpoint exact friction points, analysis of UI elements, and a review of error handling. *The guiding hypothesis is that significant user effort here (potentially measurable by increased **time on task** or higher **user error rates** for specific sub-tasks) is currently masked by high ultimate task success rates.* Addressing this will have a profound impact on overall user satisfaction and perceived efficiency. A/B testing of redesigned flows, with these **KPIs** as success metrics, would be crucial. *(Four Cs: Impact - This targeted approach ensures resources are focused on the most severe problem, aiming to improve usability, a core component often measured by **SUS**.)*
+
+2.  **Target Clarity & Guidance Deficits:** To directly address the negative sentiment in "Clarity of Instruction" and "Form Guidance," particularly concerning complex areas like tax forms and payment processes, I recommended a systematic content and conversational design overhaul. This includes refining chatbot responses to simplify technical jargon and employing progressive disclosure. All significant changes would be subject to A/B testing to empirically measure improvements in understanding and potentially reduce **user error rates** or **drop-off rates** in these flows.
+
+3.  **Task-Specific Improvements for Problematic Journeys**: The data clearly identified "Understanding Tax Forms" and "Making a Tax Payment" as tasks with elevated negative sentiment. I advocated for focusing dedicated UX design and content development resources on enhancing chatbot support specifically for these critical tasks. Success here could be measured by improved task-specific **conversion rates** and reduced **time on task**.
+
+4.  **Direct Feedback Loop Implementation for Continuous Improvement**: To address issues like broken links or perceived inaccuracies highlighted in the "Voice of the Taxpayer" analysis, I proposed establishing a more systematic and responsive QA process. This involves regularly reviewing themes from negative open-ended feedback and implementing corrective actions. *This helps build trust and reliability, which can indirectly influence attitudinal **KPIs** like **NPS**.*
+
+5.  **Scale Successes by Leveraging Positive Themes**: It's equally important to learn from what's working well. I recommended a detailed analysis of the interaction patterns within highly positive aspects and tasks. The goal is to identify replicable strategies that can be applied to improve the chatbot's performance and associated **KPIs** in underperforming areas, perhaps by understanding how a clear **navigation vs. search** preference is handled in successful interactions.
+
+*(Four Cs: Collaboration - These recommendations were explicitly designed for execution by cross-functional teams. My role as research lead would be to provide ongoing data and insights to measure the impact of these implemented changes against our defined **KPIs**, ensuring a continuous improvement cycle and demonstrating progress towards our end goals.)*
+:::
+
+## Future Directions: Enhancing the Human Experience with AI {.incremental}
+
+To continuously improve AI interactions at UKG:
+
+  - **Iteratively Test & Optimize:** Use ABSA insights to inform A/B testing, making AI more intuitive and effective.
+  - **Track AI Sentiment & UX Metrics:** Implement dashboards for ongoing monitoring of aspect sentiment, task completion, and usability.
+  - **Measure AI's Business Impact:** Connect AI usage and sentiment to behavioral indicators (adoption, engagement) and work outcomes (efficiency, satisfaction).
+  - **Proactively Mitigate Friction:** Use journey analytics with ABSA to resolve roadblocks before they broadly impact users.
+
+::: notes
+This foundational IRS study, demonstrating the power of Aspect-Based Sentiment Analysis, provides a strong launchpad for future initiatives. Looking ahead, particularly within a dynamic and innovative environment like UKG, I envision several key strategic directions to continuously enhance the human experience with AI-powered systems, always with an eye towards measurable improvement using **Key Performance Indicators (KPIs)**.
+
+1.  **Optimize AI Usability & Task Success via Iterative Testing:** The immediate and ongoing next step for insights generated from ABSA is to close the loop through rigorous, iterative testing. I would champion the systematic use of A/B testing for significant proposed changes to AI dialogue flows and content. Success would be measured by improvements in predefined **KPIs**, such as increased **task success rates**, reduced **time on task**, lower **user error rates**, or improved aspect-specific sentiment scores derived from ongoing ABSA. This ensures that modifications are data-driven and demonstrably improve AI usability.
+
+2.  **Quantify & Track Employee/Manager AI Sentiment (Direct UKG Application):** The ABSA methodology can be powerfully applied to understand the user experience of UKG's *internal* users with its AI-powered HR tools. Tracking this contextual sentiment over time, alongside established **KPIs** like the **System Usability Scale (SUS)**, would provide invaluable insights into adoption, satisfaction, and areas needing intervention to improve internal productivity and experience. This creates a feedback loop for internal tools.
+
+3.  **Establish & Monitor Key AI UX Metrics Continuously:** To maintain an ongoing, data-driven pulse on the AI user experience, I would advocate for dynamic dashboards tracking critical quantitative UX **KPIs**. This would include aspect sentiment scores, **conversion rates** for key AI-driven tasks, **drop-off rates** in conversational flows, and potentially scores from usability heuristics. This answers the question, "How is our AI performing for our users?" on an ongoing basis.
+
+4.  **Measure AI's Impact on Behavior & Business Outcomes:** A crucial strategic step is to rigorously measure AI's impact beyond interaction metrics. This involves connecting AI usage patterns and sentiment data with key behavioral **KPIs** like feature adoption rates and engagement levels, and ultimately, to tangible business outcomes such as HR task efficiency, employee satisfaction (perhaps measured by **NPS**), or reduction in support tickets. This demonstrates the ROI of AI UX improvements.
+
+5.  **Proactively Identify & Mitigate UX Friction with Journey Analytics:** By integrating ABSA "hot-spot" data with broader user journey analytics, we can proactively pinpoint potential AI interaction roadblocks *before* they escalate and negatively impact **KPIs** like **user error rates** or task **drop-off rates**. This allows for a shift from reactive problem-solving to proactively shaping a better AI user experience, perhaps even understanding preferences like **navigation vs. search** within AI interactions.
+
+*(Strategic Alignment: These future directions aim to embed a continuous, data-driven, and user-centered improvement cycle for all AI interactions, directly supporting UKG's AI-first strategy by focusing on measurable improvements in the user experience, as defined by clear **KPIs**.)*
+:::
+
+## Case Study 2: Driving E-Filing Adoption for Payroll Taxes
+
+## Fostering Digital Transformation {.incremental}
+
+This study focused on increasing payroll tax e-filing, a paper-to-digital shift. For UKG, which champions digital HR/payroll, this offers a proven model for driving user adoption of digital platforms – a core business objective. It addresses parallels like transitioning users to new digital solutions, articulating digital tool value, and overcoming user inertia with data-informed strategies, demonstrating impact applicable to UKG product initiatives.
+
+::: notes
+This second case study shifts our focus from analyzing an existing digital interaction to the challenge of proactively *driving the adoption* of digital services. Specifically, this IRS initiative was centered on significantly increasing the e-filing rate for payroll taxes among businesses and tax preparers, a critical strategic move from paper-based processes to more efficient digital ones.
+
+**Why this Matters for UKG:** This case is highly relevant because UKG is at the forefront of providing sophisticated digital HR, payroll, and workforce management solutions. A deep understanding of how to effectively encourage users – whether they are new customers onboarding to UKG platforms or existing users being introduced to new features or modules – to adopt and fully utilize these digital offerings is absolutely essential for UKG to deliver maximum value to its clients and achieve its own business objectives.
+
+**The Parallels to UKG's Operational and Strategic Challenges are Clear and Direct:** - Both scenarios involve the critical task of **guiding users from established manual, paper-based, or legacy systems to more efficient and powerful digital platforms.** This is analogous to encouraging UKG clients to adopt new product modules, leverage self-service features to a greater extent, or smoothly migrate to updated cloud-based platforms. - A core component in both contexts is **effectively communicating the tangible benefits and value proposition of digital tools** – such as enhanced operational efficiency, improved data accuracy, better security, and access to advanced capabilities that drive better business outcomes. - Crucially, both involve understanding and **strategically addressing user inertia and potential resistance to change,** which are natural human responses when faced with new ways of working. Overcoming these behavioral barriers requires more than just a good product; it requires a smart adoption strategy.
+
+This study demonstrates a structured, data-driven, and theory-informed approach, rooted in behavioral science and rigorous experimental design, to successfully influence user behavior and achieve significantly higher adoption rates for digital services. The principles, methodologies, and learnings from this initiative are directly applicable to many UKG product initiatives aimed at maximizing user engagement, platform utilization, and overall customer success. *(Four Cs: Problem Solving - Addressing the persistent and universal challenge of user adoption for beneficial, yet new or different, technologies.)*
+:::
+
+## A Collaborative, Iterative Approach {.incremental}
+
+**Objective:** Significantly increase payroll tax e-filing, shifting behavior from paper to digital.
+
+**Strategic Imperative:** Success required unified cross-functional execution. I orchestrated collaboration between Executive Sponsors, Compliance/Legal, my Research Team (led end-to-end experimental design, analysis), Communications, UX/Design (to translate insights into persuasive materials), and Database Analysts for precise targeting and measurement.
+
+::: notes
+Our **Objective** for this second major initiative was ambitious but critically important: to significantly increase the e-filing rate for payroll tax forms among businesses and tax preparers who were persistently filing on paper. This represented a key strategic push to shift behavior from traditional methods to more efficient digital channels.
+
+The **Strategic Imperative** was clear: achieving this behavioral change at scale required a unified, cross-functional execution strategy. Success hinged on a deeply collaborative, multi-disciplinary team effort, which I was central in orchestrating and leading from a research perspective. We assembled a dedicated team where each unit played a vital role:
+
+  - **Executive Sponsors (Taxpayer Services):** Their engagement was paramount. They provided essential strategic oversight, secured the necessary resources and budget, and, crucially, championed the initiative across diverse IRS departments. This ensured top-level alignment with broader agency goals for modernization and operational efficiency. *(Four Cs: Collaboration with Leadership)*
+  - **Compliance & Legal (Privacy and Liaison):** Given the sensitivity of taxpayer data and the regulatory environment, these teams acted as critical partners. They were instrumental in navigating stringent data security protocols, ensuring all our communications were fully compliant with all legal and privacy mandates, and liaised with legal teams to proactively mitigate any potential risks. *(Four Cs: Challenges - Successfully navigating complex compliance and privacy hurdles in a government context.)*
+  - **Research Team (My Core Leadership):** In my role as the research lead, I architected the end-to-end research design. This encompassed developing the experimental methodology (a large-scale Randomized Controlled Trial), precisely defining the target segments based on detailed analysis of historical filing data, formulating the specific, testable hypotheses regarding intervention effectiveness, and subsequently managing the complex statistical data analysis and interpretation of the results. *(My Role, Methodology Rigor)*
+  - **Communications & Outreach (Media and Publications Team):** This team leveraged their deep expertise in communication strategy. Our collaboration focused on translating research-informed behavioral insights and psychological principles into clear, compelling, and persuasive messaging tailored to different user segments. They also oversaw the logistical complexities of producing and disseminating all intervention materials at scale. *(Four Cs: Collaboration)*
+  - **User Experience & Design (Product Design Team):** This was a vital and close collaboration. I worked hand-in-hand with UX/UI designers to ensure that the informational materials (letters and flyers) were not only user-friendly and clear but also optimally designed to be persuasive. This involved applying principles of information hierarchy, ensuring high readability, and designing effective calls-to-action, all grounded in user-centered design and behavioral science. *(Four Cs: Collaboration, Design Thinking)*
+  - **Data Science & Analytics (Operational Research Analysts):** These partners were indispensable. Their expertise was crucial for extracting, segmenting, and meticulously de-identifying the large datasets of taxpayer and preparer filing histories. This foundational data work was essential for enabling precise targeting of our interventions and ensuring a robust, unbiased measurement of the outcomes. *(Four Cs: Collaboration with Data Experts)*
+
+This deeply collaborative and strategically aligned structure, which I played a key role in forging and guiding, was fundamental to the project's rigorous execution and its eventual significant success.
+:::
+
+## Execution & Iteration {.incremental}
+
+We adopted an agile rhythm with biweekly multi-stakeholder check-ins for momentum and rapid feedback. Clear project milestones (data acquisition, intervention design, mail-outs, analysis) ensured transparent progress. Proactive risk management addressed potential roadblocks and optimized intervention touchpoints for maximum impact.
+
+::: notes
+To manage this complex, multi-stakeholder project effectively and ensure we stayed on track to meet our ambitious goals, I implemented an agile yet structured approach to project execution and iteration:
+
+  - **Agile Rhythm & Stakeholder Alignment:** We established a consistent rhythm of biweekly check-ins and updates that involved all key stakeholders from the diverse teams mentioned. This regular communication was vital to maintain project momentum, ensure continuous alignment on goals and progress, and, importantly, facilitate rapid feedback loops. If analytical challenges arose, if messaging needed refinement based on initial small-scale tests, or if logistical issues emerged, these forums allowed us to address problems quickly, collaboratively, and make timely course corrections and decisions. *(Four Cs: Communication, Collaboration, Problem Solving)*
+
+  - **Milestone-Driven Project Management for Clarity and Accountability:** From the outset, we established clear and defined project keystones. These critical milestones included target dates for final data acquisition for precise targeting, finalization of intervention designs (letters, postcards, flyers), execution of mail-out waves, and specific timelines for post-intervention data collection and subsequent statistical analysis. This milestone-driven approach provided transparency across all teams and allowed everyone to track progress against a shared and agreed-upon timeline, fostering accountability. *(Project Management Rigor)*
+
+  - **Proactive Risk & Touchpoint Management to Mitigate Challenges:** We didn't wait for problems to derail the project. As a leadership team, we proactively identified and discussed potential roadblocks. These included managing expectations around data limitations, navigating potential disagreements on design elements to achieve consensus across different stakeholder groups with varying priorities, and addressing the significant logistical hurdles involved in executing large-scale, multi-wave mailings accurately and on time. In parallel with this risk management, we strategically analyzed and identified the key taxpayer and tax preparer touchpoints where our interventions would be most impactful and least intrusive, ensuring our efforts were both effective and respectful of the user's context. *(Four Cs: Challenge Management, Strategic Thinking)*
+
+This disciplined, iterative, and highly communicative execution style was instrumental in navigating the complexities of a large-scale behavioral intervention study within a large government agency, ultimately leading to impactful and reliable results.
+:::
+
+## Methodology: Research Design: A Nudge Towards Digital {.incremental}
+
+Target audiences (businesses & preparers) were stratified by paper filing history and demographics. We used a Randomized Controlled Trial (RCT) with Postcard, Letter/Flyer, and Control arms to isolate causal impact. An extra-period Latin squares sequence (within-subject, 4 observations/filer) boosted statistical power. An initial $N = 22,500$ (90,000 total observations via power analysis) ensured precision.
+
+## Methodology: Research Design: A Nudge Towards Digital {.incremental}
+
+Target audiences (businesses & preparers) were stratified by paper filing history and demographics. We used a Randomized Controlled Trial (RCT) with Postcard, Letter/Flyer, and Control arms to isolate causal impact. An extra-period Latin squares sequence (within-subject, 4 observations/filer) boosted statistical power. An initial $N=22,500$ (90,000 total observations via power analysis) ensured precision.
+
+```{=html}
+<div style="font-family: Avenir, sans-serif; margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+  <h5 style="text-align: center; color: #333; margin-bottom: 15px;">Extra-Period Latin Squares Design Example</h5>
+  <p style="text-align: center; font-size: 0.9em; color: #555; margin-bottom:15px;">(6 Sequences, 3 Treatments, 4 Periods)</p>
+  <table style="width: 100%; border-collapse: collapse; text-align: center;">
+    <thead>
+      <tr style="background-color: #e8f4fd; color: #2c3e50;">
+        <th style="border: 1px solid #ddd; padding: 8px;">Sequence</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Period 1</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Period 2</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Period 3</th>
+        <th style="border: 1px solid #ddd; padding: 8px;">Period 4</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 1</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 2</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 3</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 4</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 5</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; background-color: #f0f0f0;"><strong>Seq 6</strong></td>
+        <td style="border: 1px solid #ddd; padding: 8px;">C</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">P</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">L</td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="margin-top: 15px; font-size: 0.9em; text-align: center;">
+    <strong>Legend:</strong> 
+    <span style="display: inline-block; margin-left: 10px;"><strong>P</strong> = Postcard</span>
+    <span style="display: inline-block; margin-left: 10px;"><strong>L</strong> = Letter/Flyer</span>
+    <span style="display: inline-block; margin-left: 10px;"><strong>C</strong> = Control</span>
+  </div>
+</div>
+```
+
+
+
+::: notes
+The core of this study was a rigorously designed behavioral intervention aimed at "nudging" persistent paper filers towards the more efficient electronic filing method. My role as the research lead was to define, design, and oversee this complex research design to ensure we could confidently measure the impact of our interventions.
+
+  - **Target Audiences:** We didn't adopt a one-size-fits-all approach. Instead, we precisely **stratified businesses and tax preparers** based on their historical filing patterns (specifically identifying consistent paper filers) and also considered key business demographics like age and size, which can correlate with digital adoption tendencies. *This segmentation was crucial for enabling more nuanced analysis later and understanding if interventions had differential effects across distinct user groups.*
+
+  - **Intervention Core - Randomized Controlled Trial (RCT):** To establish causality and understand what truly worked, we employed a **Randomized Controlled Trial (RCT)**, which is widely recognized as the gold standard for causal inference in research. Our RCT had three arms:
+
+    1.  A group receiving a concise **Postcard (PC)**.
+    2.  A group receiving a more detailed **Letter (L)** (which also included an informational flyer).
+    3.  A **Control group (C)** that received no communication from us regarding this initiative. All communications were carefully designed to encourage e-filing by highlighting key benefits: that it was **Secure, Easy, and Accurate.** *The strategic decision to use an RCT was paramount, as it allowed us to rigorously isolate the causal impact of our behavioral nudges from other confounding factors that might also influence e-filing behavior.*
+
+  - **Advanced Experimental Design - Latin Squares for Efficiency & Power:** To maximize our learning and statistical power, we utilized a sophisticated **extra-period Latin squares sequence** for distributing the treatments (Postcard, Letter, Control) over 4 quarterly tax filing periods. This is a type of **within-subject design**, meaning each filer in the study essentially acted as their own control over time, as they could potentially receive different (or no) treatments across the different quarters. *This design was strategically chosen because it significantly boosts statistical efficiency and the power of our analysis, allowing us to detect smaller, yet meaningful, effects with greater confidence and with a smaller overall sample size than a simpler between-subjects design might require.*
+
+  - **Robust Sample Size & Statistical Power - Ensuring Reliable Findings:** The integrity of our findings depended on an adequately powered study. An initial sample of $N = 22,500$ Form 941 filers was meticulously determined through an ***a priori*** **power analysis.** This statistical calculation ensured we had sufficient statistical power (we targeted $(1-\\beta) = 0.80$, meaning an 80% chance of detecting a true effect if one existed) to identify meaningful effect sizes, at a conventional significance level of $\\alpha = 0.05$. With approximately 7,500 filers per treatment group within each of the 4 quarterly filing periods, the design ultimately yielded a massive **90,000 total observations**. *This large N provided very high analytical precision and robust, reliable findings that could be presented to stakeholders with a high degree of confidence.* (Four Cs: Rigor, Advanced Methodology)
+
+:::
+
+## Methodology: Designing the Interventions {.incremental}
+
+In partnership with Product Design (UX/UI) and Media & Publications, we created flyers (detailed info) and postcards (quick nudge), guided by behavioral science. Materials were tailored for Taxpayers vs. Preparers, emphasizing clarity, actionability, and trustworthy design. *(Visuals below)*
+
+## Methodology: Designing the Interventions
+
+::: {.panel-tabset}
+
+### Flyers (Detailed Information)
+::::: columns
+::: {.column width="50%"}
+!["Taxpayer E-File Flyer"](Taxpayer%20Flyer_v4.png){fig-alt="Taxpayer E-File Flyer" width="90%"} 
+*Taxpayer Flyer: Clear benefits (Secure, Easy, Accurate) with user-friendly design.*
+:::
+
+::: {.column width="50%"}
+!["Preparer E-File Flyer"](Preparer%20Flyer_v4.png){fig-alt="Preparer E-File Flyer" width="90%"} 
+*Preparer Flyer: Professional messaging focused on efficiency, client service benefits, and accuracy.*
+:::
+:::::
+
+### Postcards (Concise Nudge)
+::::: columns
+::: {.column width="50%"}
+!["Taxpayer E-File Postcard"](Taxpayer%20Postcard_v4.png){fig-alt="Taxpayer E-File Postcard" width="90%"} 
+*Taxpayer Postcard: Immediate visual impact with clear call-to-action.*
+:::
+
+::: {.column width="50%"}
+!["Preparer E-File Postcard"](Preparer%20Postcard_v4.png){fig-alt="Preparer E-File Postcard" width="90%"} 
+*Preparer Postcard: Direct message emphasizing efficiency and reliability for tax professionals.*
+:::
+:::::
+
+:::
+
+**Design Strategy:** Materials tailored to distinct user needs with professional, trustworthy communication that emphasizes clarity and actionable steps.
+
+::: notes
+The design of the intervention materials themselves – the letters (which included flyers) and postcards – was a critical component of this study and a highly collaborative effort. As the research lead, I worked in close partnership with the **Product Design (UX/UI) team** and the **Media & Publications team.** My role was to ensure our outreach materials were not only informative but also grounded in behavioral science principles to maximize their persuasive impact.
+
+**Intervention Materials - Tailored and Purposeful:** As you can see from these examples, we developed two primary forms of communication, with distinct versions for direct taxpayers versus tax preparers, recognizing their different contexts and motivations:
+
+**Flyers (Detailed Information Approach):** These were included with the letters and provided more comprehensive information. - The *Taxpayer Flyer* (top left) was designed with the individual business owner in mind – visually accessible, using clear, straightforward language, and employing user-friendly iconography to emphasize the core benefits of e-filing: that it is Secure, Easy, and Accurate. - The *Preparer Flyer* (top right) used language and framing more suited to tax professionals, focusing on benefits such as practice efficiency, enhanced client service, and improved accuracy in filings.
+
+**Postcards (Concise Nudge Approach):** These were designed to serve as a more immediate, low-cognitive-load "quick nudge." - The *Taxpayer Postcard* (bottom left) aimed for rapid visual impact, featuring a prominent call-to-action and minimal text, reinforcing the "Secure, Easy, Accurate" message. - The *Preparer Postcard* (bottom right) was similarly direct and concise, highlighting how e-filing could bring efficiency and reliability to their professional practice.
+
+**Overall Design Goal & Core Principles:** Across all these materials, our collaborative design process was guided by several key principles: - **Clarity:** All benefits and calls to action needed to be immediately understandable. - **Actionability:** We focused on simple, clear instructions for how to e-file. - **Audience Relevance:** Messaging, tone, and visual design were carefully tailored to resonate with the distinct needs, motivations, and professional contexts of individual taxpayers versus seasoned tax preparers. - **Persuasive Impact (Grounded in Behavioral Science):** We consciously incorporated behavioral science principles, such as highlighting ease of use (reducing perceived effort), emphasizing security and accuracy (building trust), and framing benefits positively. Visual hierarchy and a professional, authoritative, and trustworthy aesthetic, consistent with the IRS brand, were also paramount.
+
+*(Four Cs: Collaboration, Design Thinking. The 'why' behind this meticulous design focus was to maximize the persuasive impact of our interventions by ensuring the materials were not only informative but also highly user-centered and behaviorally informed. We A/B tested message framing in early pilots to arrive at these.)*
+:::
+
+## Research Lifecycle & Timeline
+
+::: notes
+
+  - This behavioral intervention study followed a rigorous, multi-phase research plan to ensure valid and actionable insights into driving digital adoption.
+  - The lifecycle, visualized below, spanned strategic definition through execution, robust analysis, and actionable recommendations.
+  
+:::
+
+```{=html}
+
+<div class="workflow-diagram-cs2" style="font-family: Avenir, sans-serif !important; margin-top: 125px !important; font-size: 0.75em !important;">
+  
+  <div class="workflow-row" style="display: flex !important; justify-content: space-around !important; align-items: flex-start !important; text-align: center !important; position: relative !important; margin-bottom: 12px !important;">
+    <div class="workflow-line-cs2-row1" style="position: absolute !important; top: 15px !important; left: 8% !important; width: 84% !important; height: 1px !important; background-color: #2c3e50 !important; z-index: 0 !important;"></div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="3" style="width: 18% !important; position: relative !important; z-index: 1 !important;"> 
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">1</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Strategic Definition</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Problem ID, Stakeholder Alignment, Set Objectives.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Weeks 1-6)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Research Charter</p>
+    </div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="4" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">2</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Audience & Data</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Segment Paper Filers & Data Extraction.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Weeks 6-8)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Target Sample Frame</p>
+    </div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="5" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">3</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Experiment & Intervention Design</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">RCT Design, Power Analysis, Create Materials (UX/UI Collab).</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Weeks 8)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Testable Interventions</p>
+    </div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="6" style="width: 18% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">4</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Intervention Execution</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Phased Mail-outs (Postcards/Letters) over 4 Tax Quarters.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Oct 2023 - 12 Months - Across 4 Qtrs)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Treatments Deployed</p>
+    </div>
+  </div>
+
+  <div class="workflow-row" style="display: flex !important; justify-content: center !important; align-items: flex-start !important; text-align: center !important; position: relative !important;">
+    <div class="workflow-line-cs2-row2" style="position: absolute !important; top: 15px !important; left: 18% !important; width: 64% !important; height: 1px !important; background-color: #2c3e50 !important; z-index: 0 !important;"></div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="7" style="width: 26% !important; margin: 0 1% !important; position: relative !important; z-index: 1 !important;"> 
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">5</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Data Collection & Measurement</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Track E-Filing Rates Post-Intervention Periods.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Ongoing after CDW data update)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Raw Outcome Data</p>
+    </div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="8" style="width: 26% !important; margin: 0 1% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">6</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Statistical Analysis</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Probit Regression, AME/OR Calculation, Hypothesis Testing.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Ongoing)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Quantified Impact</p>
+    </div>
+    
+    <div class="workflow-phase-cs2 fragment" data-fragment-index="9" style="width: 26% !important; margin: 0 1% !important; position: relative !important; z-index: 1 !important;">
+      <div class="workflow-milestone-cs2" style="width: 30px !important; height: 30px !important; background-color: #d4eaf7 !important; border: 1px solid #2c3e50 !important; border-radius: 50% !important; margin: 0 auto 4px !important; display: flex !important; align-items: center !important; justify-content: center !important; font-weight: bold !important; color: #2c3e50 !important; font-size: 0.75em !important;">7</div>
+      <h6 class="workflow-title-cs2" style="color: #2c3e50 !important; font-weight: bold !important; margin-bottom: 1px !important; font-size: 0.75em !important;">Reporting & Recommendations</h6>
+      <p class="workflow-desc-cs2" style="font-size: 0.75em !important; color: #555 !important; line-height: 1.05 !important; margin-bottom: 1px !important;">Synthesize Findings, Report to Leadership, Recommend Rollout.</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important; font-style: italic !important;">(Oct 2024: Weeks 2)</p>
+      <p class="workflow-output-cs2" style="font-size: 0.75em !important; color: #2c3e50 !important; font-weight: bold !important; margin-top:1px !important;">Output: Strategic Plan</p>
+    </div>
+  </div>
+</div>
+```
+
+## Hypotheses {.incremental}
+
+We tested if communications increased e-filing versus no communication. We also hypothesized that concise postcards would be more effective than detailed letters, based on behavioral science principles suggesting simpler nudges often outperform information-heavy approaches for busy audiences.
+
+::: notes
+Based on established behavioral science literature – which often suggests that simpler, timely "nudges" can be highly effective in prompting action, sometimes more so than information-heavy approaches – and our understanding of the target audience (busy business owners and tax preparers who may have limited time and attention), we formulated three primary, testable hypotheses for this study:
+
+1.  $H\_1$ (Postcard vs. Control): We hypothesized that receiving a concise postcard communication, acting as a salient nudge, would significantly increase the probability of e-filing compared to the control group that received no targeted communication from this initiative. *This tests the fundamental efficacy of a minimal, low-cost intervention.*
+
+2.  $H\_2$ (Postcard vs. Letter/Flyer): Building on the "less is more" principle often seen in behavioral nudges, we posited that the postcard, due to its brevity, ease of processing, and immediate visual impact, might be *more* effective in increasing e-filing adoption rates than the more detailed letter/flyer communication, which required more cognitive effort to engage with. *This tests the relative effectiveness of different intervention intensities.*
+
+3.  $H\_3$ (Letter/Flyer vs. Control): We also hypothesized that receiving the more detailed letter/flyer communication, which provided more comprehensive information and context, would significantly increase the e-filing adoption rate compared to the control group. *This tests the efficacy of a more information-rich intervention approach.*
+
+These clearly defined hypotheses provided a rigorous framework for our subsequent statistical analysis and the interpretation of the experimental results, allowing us to draw clear conclusions about which intervention strategy was most impactful.
+:::
+
+## Results: Measuring the Impact on E-Filing {.incremental}
+
+We employed probit regression models to rigorously analyze e-filing behavior change post-intervention. This method is ideal for binary outcomes (e-file vs. paper) and estimates treatment effects on probabilities, quantifying the impact of each communication type versus the Control.
+
+::: notes
+Now we turn to the core results of our e-filing adoption experiment. To rigorously measure the impact of our interventions on taxpayer and preparer e-filing behavior, I led the team in utilizing **probit regression models.**
+
+*The strategic choice of probit regression was due to its suitability for analyzing binary outcomes – in this case, whether a participant chose to e-file (1) or continued to file on paper (0). This modeling approach allows us to estimate the effect of our different treatments (postcard and letter/flyer) on the probability of e-filing, while also controlling for other demographic and business characteristics that might influence this decision.* This ensures we are isolating the impact of our communications as accurately as possible.
+
+Our primary focus in this analysis was to quantify the precise, causal impact of each communication type when compared to the control group that received no intervention, and also to compare the effectiveness of the postcard versus the letter/flyer. The following slides will present these findings in terms of Average Marginal Effects and Odds Ratios.
+:::
+
+## Average Marginal Effects
+
+*AMEs quantify the percentage point (*$pp$) increase in e-filing probability due to each intervention, segmented by filer type.
+
+:::::: columns
+:::: {.column .small-text-left width="40%"}
+::: incremental
+**Key Finding: Postcards consistently and significantly outperformed letters across all filer segments.**
+Taxpayer Only: Postcard $\rightarrow \approx +5.8pp$ e-filing probability.
+Paid-Preparer: Postcard $\rightarrow \approx +6.2pp$.
+Taxpayer + Paid-Preparer: Postcard $\rightarrow \approx +7.1pp$.
+**Letters:** Also effective vs. control, but yielded smaller gains ($\approx +1.7pp$ to $+3pp$).
+***Strategic Implication: Concise, salient "nudges" (postcards) proved substantially more effective in driving e-filing adoption for all segments, supporting*** $H_1$, $H_2$, and $H_3$.
+:::
+::::
+
+::: {.column width="60%"}
+![](V5_R_average_marginal_effects_plot_XL.png){width="100%"}
+:::
+::::::
+
+::: notes
+This plot visualizes the **Average Marginal Effects (AMEs)** from our probit models. In simple terms, the AME tells us the average percentage point increase in the probability of a user e-filing that can be directly attributed to receiving either the postcard or the letter/flyer, compared to the control group. We've segmented these results by different filer types to see if effects varied.
+
+**The Key Finding is Striking and Consistent:** - **Postcards consistently and significantly outperformed letters across all filer segments.** - For the "Taxpayer Only" segment (businesses filing for themselves), receiving a postcard increased their probability of e-filing by approximately **5.8 percentage points** compared to the control. - For "Paid-Preparer" segments, the postcard yielded an increase of around **6.2 percentage points.** - And for the "Taxpayer+Paid-Preparer" segment (businesses who sometimes use a preparer and sometimes file themselves), the postcard intervention resulted in the largest lift, an approximate **7.1 percentage point increase** in e-filing probability.
+
+-   **Letters/Flyers also demonstrated a positive impact** compared to the control group, increasing e-filing probability by approximately 1.7 to 3 percentage points depending on the segment. While statistically significant, this effect was notably smaller than that of the postcards.
+
+***Strategic Implication and Hypothesis Testing:*** These results provide strong evidence that concise, salient "nudges" in the form of postcards were substantially more effective in driving the desired behavioral change – e-filing adoption – across all targeted segments. This supports our hypotheses: - $H_1$ (Postcard vs. Control) is strongly supported: Postcards significantly increased e-filing. - $H_3$ (Letter vs. Control) is also supported: Letters increased e-filing, albeit to a lesser degree. - $H_2$ (Postcard vs. Letter) is strongly supported: Postcards were indeed more effective than letters.
+
+This suggests that for this type of behavioral shift, overcoming inertia or forgetfulness with a simple, easy-to-process prompt (the postcard) was more impactful than providing more detailed information, which might have higher cognitive costs or lower engagement rates. This has clear implications for designing cost-effective communication strategies. *(Four Cs: Impact - This identified not just* an\* effective intervention, but the *most* effective and potentially most cost-efficient one.)\*
+:::
+
+## Results: Odds Ratios
+
+*Odds Ratios (ORs) show how the odds of e-filing change with each intervention (OR \> 1 indicates increased likelihood).*
+
+:::::: columns
+:::: {.column .small-text-left width="40%"}
+::: incremental
+**Reinforcing AME Findings:** Postcards substantially increased e-filing odds by approximately **20%** (ORs \~1.2) across all segments relative to control.
+**Letters:** Also increased odds, but more modestly, by approximately **5% to 8%** (ORs \~1.05 to 1.08) relative to control.
+**The clear winner was thelower-cost intervention - providing a scalable model for influencing user behavior that balances effectiveness with implementation resource requirements.**
+:::
+::::
+
+::: {.column width="60%"}
+![](V5_R_odds_ratios_plot_XL.png){width="100%"}
+:::
+::::::
+
+::: notes
+The **Odds Ratios (ORs)** provide another statistical lens through which to understand the magnitude and direction of our interventions' effects. An odds ratio greater than 1 signifies that the intervention group had higher odds of e-filing compared to the control group.
+
+**Key Findings from Odds Ratios – Reinforcing the AME Story:** The results from the odds ratios align perfectly with and strongly reinforce the findings we saw with the Average Marginal Effects:
+
+-   Consistent with the AME analysis, **postcards substantially increased the odds of e-filing.** Across all filer segments, the odds ratios for the postcard treatment hovered around 1.2. This means that the odds of e-filing were approximately **20% higher** for those who received a postcard compared to those in the control group. This is a considerable shift in behavior.
+
+-   **Letters also increased the odds of e-filing** compared to the control group, though to a notably lesser extent. The odds ratios for the letter treatment were in the range of approximately 1.05 to 1.08. This translates to an approximate **5% to 8% increase in the odds of e-filing** – a positive effect, but clearly smaller than the postcard's impact.
+
+***Conclusion from Statistical Evidence:*** The concordance between the Average Marginal Effects and the Odds Ratios strengthens our conclusions considerably. Both analytical approaches robustly confirm that the **postcard intervention was a demonstrably more potent catalyst for driving e-filing adoption** in this large-scale experiment. It significantly altered the odds in favor of digital filing across all diverse user types we studied, providing clear, actionable evidence for future communication strategies. *(Rigor: Using multiple statistical viewpoints (AMEs and ORs) to confirm the robustness and direction of the findings provides higher confidence in the conclusions.)*
+:::
+
+## Summary: E-Filing Study Relevance to UKG {.incremental}
+
+This study provides UKG with a validated, cost-effective model for increasing digital adoption. The results demonstrate that targeted communications based on user segmentation can significantly shift behavior toward digital platforms - directly applicable to UKG's need to maximize adoption of new features and digital self-service. The research methodology connects user experience directly to operational efficiency, providing a framework for UKG to quantify the business impact of UX improvements across its product portfolio.
+
+::: notes
+This IRS e-filing study offers several key learnings and demonstrates approaches that are highly relevant and directly transferable to UKG's strategic goals of fostering digital transformation and maximizing user engagement with its sophisticated platforms:
+
+1.  **Proven Digital Adoption Strategies:** The study unequivocally shows that targeted, data-informed behavioral interventions – even seemingly simple and cost-effective "nudges" like postcards – can be remarkably effective in shifting users from analog to digital platforms. *This offers UKG a validated model and empirical evidence that such strategies can be directly applied to boost the adoption of its diverse suite of solutions, encourage the uptake of new features, or facilitate smoother migrations to new systems. (Four Cs: Counterfactual - Without such empirical testing, organizations might invest in more elaborate or expensive adoption campaigns that could prove less effective than simpler, behaviorally-informed nudges. This research demonstrates how to optimize that investment for maximum impact and user uptake.)*
+
+2.  **The Multiplier Effect of Strategic Cross-Functional Collaboration:** The significant success of this large-scale behavioral intervention was critically dependent on the tightly coordinated and deeply collaborative efforts of a diverse team. This spanned my research leadership, UX/UI design, data science and analytics, communications, and proactive executive sponsorship. *This collaborative blueprint is not just a nice-to-have; it's a vital model for successfully executing complex, high-impact product and UX initiatives within a dynamic and multifaceted organization like UKG, ensuring comprehensive alignment and effective, efficient execution.* *(Four Cs: Collaboration)*
+
+3.  **Strategic UX Research Drives Measurable Business Outcomes:** This case study serves as clear and compelling proof that strategic UX research, when it incorporates elements of behavioral science, rigorous experimental design, and a nuanced understanding of user psychology, delivers tangible and measurable business impact. The outcomes here included a significant increase in digital adoption – which directly translates to greater operational efficiency and reduced costs associated with paper processing – alongside a deeper understanding of how to motivate user behavior. *This elevates the role of UX research far beyond traditional usability testing, positioning it as a strategic partner capable of directly influencing key business performance indicators.* *(Four Cs: Impact, Value of UXR)*
+:::
+
+## Applicability to UKG Products {.incremental}
+
+These methods can drive UKG self-service adoption, accelerate new AI feature uptake, and smooth platform migrations. Applying rigorous user segmentation, A/B testing of behavioral interventions, and RCTs offers deeper insights into UKG's user base, leading to more effective engagement campaigns, enhanced customer experience, and stronger business outcomes.
+
+::: notes
+The methodologies, learnings, and successes from this e-filing study have broad and direct applicability to various strategic challenges and growth opportunities within UKG's product landscape:
+
+  - **Driving Self-Service Adoption:** Similar "nudge" techniques, A/B tested messaging, and clear value proposition communications could be strategically employed to significantly increase employee and manager engagement with UKG's self-service HR portals. *This would not only empower users but also demonstrably increase HR operational efficiency and reduce reliance on more costly direct HR support for common tasks.*
+
+  - **Accelerating New Feature Uptake:** When UKG rolls out innovative new AI-powered features or advanced modules within its suites, a data-informed approach to communicating their value and encouraging initial trial can substantially accelerate adoption rates. *Understanding user motivations and potential barriers through research can ensure these powerful new capabilities are effectively utilized and deliver their intended benefits quickly.*
+
+  - **Smoothing Platform Migrations and Onboarding:** For customers transitioning from older systems to newer, cloud-based UKG platforms, or for new customers undergoing onboarding, applying insights on change management and user motivation can facilitate smoother, more positive experiences. *Targeted communications and support strategies, informed by research, can reduce friction and enhance overall customer satisfaction during these critical transition periods.*
+
+  - **Broader Methodology Transfer for Enhanced Customer & Business Outcomes:** More broadly, by systematically applying similar rigorous research methodologies – including careful user segmentation, the design and A/B testing of behaviorally-informed interventions, and the use of Randomized Controlled Trials (RCTs) where appropriate to determine causal impact – UKG can achieve several strategic goals:
+
+      - Gain a deeper, more nuanced understanding of the motivations, needs, and potential barriers of its diverse global user base.
+      - Design more effective, persuasive, and data-driven adoption and engagement campaigns for its products and services.
+      - Ultimately, significantly enhance the overall customer and employee experience with all UKG products. *This strategic application of quantitative UX research leads directly to highly desirable business outcomes such as greater product stickiness, higher perceived value from customers, stronger user loyalty, and improved key performance indicators (KPIs) like conversion rates and reduced drop-off rates.*
+
+:::
+
+## Driving UKG's Success Through User-Centric and Data-Driven Research Leadership {.incremental}
+
+These IRS case studies (AI experience analysis, digital adoption) offer validated models for enhancing digital platforms and influencing user behavior, rooted in rigorous data, stakeholder engagement, and cross-functional collaboration. This approach is directly transferable to optimizing UKG's AI solutions and improving product KPIs.
+
+My UX leadership delivers strategic insights for UKG's AI/digital products via advanced methods (ABSA, RCTs, SUS, NPS) to pinpoint pain points, identify opportunities, and measure KPI progress. I define research roadmaps, lead complex studies (tracking time-on-task, error/conversion rates), mentor teams in quantitative skills, and foster collaboration to embed user focus.
+
+I translate rigorous analysis into practical improvements and strategic decisions that demonstrably boost adoption, satisfaction, and task success. I am committed to leveraging this research leadership to ensure UKG's tools are powerful, intuitive, and widely adopted, supporting UKG's mission to "inspire every organization to become a great place to work."
+
+::: notes
+In conclusion, the case studies I've presented today – one focusing on deeply understanding and improving an existing AI-driven user experience through Aspect-Based Sentiment Analysis, and the other on proactively driving digital adoption via behavioral science and experimental design – offer a **proven blueprint** with powerful and direct applications for UKG. My success in these complex initiatives, and consistently throughout my career, has been rooted in three key elements: the disciplined application of **rigorous data-driven methodologies**, the cultivation of **strategic and proactive stakeholder engagement** at all organizational levels, and the leadership of **deep, effective cross-functional collaboration**. These demonstrated approaches and my leadership style are not just theoretical; they are directly transferable and highly relevant to optimizing UKG's AI-first HR solutions, enhancing its overall digital ecosystem, and demonstrably improving **key performance indicators (KPIs)** related to product success and user experience.
+
+**My UX Leadership & Expertise for UKG would manifest in several key ways, always with an eye toward measurable impact:** \* I will deliver **Strategic Insight** by employing a wide range of advanced quantitative and mixed methods – including those showcased like ABSA and large-scale experimental design, but also standard UX metrics like **System Usability Scale (SUS)**, **Net Promoter Score (NPS)**, task success rates, and efficiency measures. This comprehensive toolkit will allow us to pinpoint critical pain points, identify strategic opportunities, and rigorously measure our progress toward clearly defined **key performance indicators.** \* I offer proven **Research Program Leadership**. My experience includes defining impactful research roadmaps that are tightly aligned with overarching business goals, leading complex quantitative and qualitative studies at scale, and championing a pervasive data-informed, user-centric culture throughout UKG. This includes setting up frameworks to track critical product health metrics such as **time-on-task**, user **error rates**, **drop-off rates**, and **conversion rates**, ensuring we always understand how design changes affect usability and effectiveness. \* I bring strong skills in **Mentorship & Cross-Functional Collaboration**. I have a track record of guiding and mentoring UX research teams to elevate their quantitative skills and strategic thinking. I also excel at fostering highly effective collaboration across diverse departments – including product, design, engineering, and marketing – to ensure user focus and data-driven decision-making are embedded in every stage of the product lifecycle, keeping everyone aligned on shared KPIs. \* Crucially, my approach is always geared towards **Action-Oriented & Measurable Outcomes.** I specialize in translating rigorous analysis into practical design improvements and strategic product decisions that demonstrably boost adoption, satisfaction, task success, and other vital business and user experience **KPIs.** If a manager were to ask me how a study went, my response would be grounded in these pre-defined measures of progress, clearly articulating what we learned and how it moves us closer to our end goals.
+
+**My Commitment to UKG's Mission:** I am genuinely excited by the prospect of bringing this comprehensive research leadership to UKG. My commitment would be to work with you to ensure that UKG's AI and digital tools are not only technologically powerful but also intuitive, valuable, and widely adopted – leading to demonstrably better user outcomes and improved product health, as measured by well-chosen **KPIs** such as user preference for **navigation vs. search**, or overall satisfaction. By deeply understanding user needs and tirelessly championing their experience through robust, data-driven research focused on clear **key performance indicators**, I am confident that I can directly and significantly support UKG's inspiring mission to "inspire every organization to become a great place to work."
+
+Thank you. I'm happy to answer any questions.
+:::
+
+## Appendix: Experimental Design Diagram
+
+![](experimental_design_figure.png){width="80%" fig-align="center"}
+
+*Diagram: Extra-period Latin square design with 6 sequences distributing treatments (PC=Postcard, L=Letter, C=Control) over 4 quarterly filing periods across stratified taxpayer segments. This within-subject design maximized statistical power for detecting intervention effects and ensuring reliable measurement of KPIs like adoption rate changes.*
+
+::: notes
+This diagram visually represents the sophisticated experimental design used in the e-filing adoption study – the extra-period Latin squares sequence. It illustrates how the 6 unique sequences ensured a balanced allocation of our three treatments (Postcard, Letter, and Control) across the 4 quarterly filing periods. Each filer type (stratified by business characteristics and filing history) would be assigned to one of these sequences.
+
+The key benefit of this within-subject design, as mentioned earlier, is that each filer acts as their own control over time, which significantly enhances statistical power and allows for more precise estimation of the treatment effects compared to a simpler design where each participant only experiences one condition. This level of methodological rigor was crucial for generating confident and defensible findings regarding the interventions' impact on our primary KPI: the e-filing adoption rate.
+:::
+
+## Appendix: Probit Regression Model Summary
+
+This table shows the probit regression model coefficients, indicating the effect of treatments (postcard, letter) and demographic variables on e-filing likelihood.
+
+<iframe src="V5_probit_regression_table.html" width="100%" height="400px" style="border:none;">
+
+</iframe>
+
+*Statistical Output: Probit coefficients confirm that both postcard and letter treatments had statistically significant positive effects on increasing e-filing likelihood (our key conversion KPI) compared to the control, with variations across taxpayer segments, demonstrating measurable progress towards our goal.*
+
+::: notes
+This table presents a summary of the output from our probit regression models, which were used to analyze the e-filing data. For those interested in the statistical details, the coefficients represent the change in the z-score of the probit model associated with each variable, indicating their influence on our primary KPI, the e-filing conversion rate.
+
+The key takeaways visible here are the statistically significant positive coefficients for both the "Postcard" and "Letter" treatments across the different samples (Taxpayer Only, Paid-Preparer, Taxpayer + Paid-Preparer). This statistical significance (indicated by p-values, typically shown by asterisks not visible in this iframe capture but present in the full output) confirms that both interventions reliably increased the likelihood of e-filing compared to the control group, even after accounting for other demographic and business characteristics included in the model. This showed clear progress toward our end goal of increased digital adoption.
+
+The magnitude of these coefficients, when transformed into probabilities (as shown in the Average Marginal Effects and Odds Ratios plots earlier), clearly indicated the stronger impact of the postcard. This detailed output underpins the conclusions drawn previously about the effectiveness of different interventions in changing user behavior.
+:::
