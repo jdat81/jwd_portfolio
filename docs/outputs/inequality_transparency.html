@@ -9,6 +9,10 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+        .content-wrapper {
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
@@ -28,24 +32,76 @@
             margin: 2rem 0;
             border-radius: 8px;
         }
-        .nav-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        /* New Header Styling */
+        .top-header {
+            background-color: #3a7f98;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
             z-index: 1000;
-            margin-right: calc((100% - 1200px) / 2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .nav-button {
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .header-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+        }
+        
+        .header-btn:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-nav {
+                justify-content: center;
+                gap: 0.8rem;
+                flex-wrap: wrap;
+            }
+            
+            .header-btn {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+        }
+        
+        /* Full Paper button specific styling */
+        .full-paper-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .full-paper-btn {
             background-color: #3a7f98;
             color: white;
             border: none;
-            padding: 8px 16px;
+            padding: 12px 24px;
             border-radius: 6px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: 500;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -53,19 +109,15 @@
             align-items: center;
             gap: 8px;
         }
-        .nav-button:hover {
+        .full-paper-btn:hover {
             background-color: #2c6b7d;
+            color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(58, 127, 152, 0.2);
         }
-        .nav-button svg {
-            width: 16px;
-            height: 16px;
-        }
-        @media (max-width: 1200px) {
-            .nav-container {
-                margin-right: 0;
-            }
+        .full-paper-btn svg {
+            width: 20px;
+            height: 20px;
         }
         h1, h2 {
             color: #000000;
@@ -110,6 +162,14 @@
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
+        }
+        .analysis-section h2.section-title {
+            background-color: #3a7f98;
+            color: white;
+            padding: 1rem 1.5rem;
+            margin: 0 0 1.5rem 0;
+            border-radius: 6px;
+            font-size: 1.3rem;
         }
         .iframe-container {
             background-color: white;
@@ -156,31 +216,23 @@
     </style>
 </head>
 <body>
-    <div class="nav-container">
-        <a href="../index.html" class="nav-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-            </svg>
-            Home
-        </a>
-        
-        <a href="./secrecy_revised.pdf" class="nav-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
-            Full Paper
-        </a>
-    </div>
+    <!-- New Top Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav class="header-nav">
+                <a href="../index.html" class="header-btn">Home</a>
+                <a href="../index.html#projects" class="header-btn">Portfolio</a>
+                <a href="publications.html" class="header-btn">Publications</a>
+                <a href="https://drive.google.com/file/d/1RQKH50Oau3g2n1lM8K_8y_QFUaY-hPka/view?usp=sharing" class="header-btn" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Inequality, Transparency, and the Public Good: Experimental Evidence on Cooperation and Social Outcomes</h1>
+    <div class="content-wrapper">
+        <h1>Inequality, Transparency, and the Public Good: Experimental Evidence on Cooperation and Social Outcomes</h1>
 
     <div class="analysis-section">
-        <h2>Project Overview</h2>
+        <h2 class="section-title">Project Overview</h2>
         <p>This experimental research investigates the complex relationships between economic inequality, financial transparency, and cooperation in public good provision. Using controlled laboratory experiments with real monetary incentives, we examine how transparency mechanisms and peer punishment systems influence cooperative behavior across different wealth distributions and institutional frameworks.</p>
         
         <div class="methodology-box">
@@ -204,6 +256,21 @@
             <li><strong>Demand for Secrecy:</strong> Advantaged participants show systematically higher willingness to pay for information concealment</li>
             <li><strong>Social Welfare:</strong> Transparent institutions with punishment options maximize both cooperation and overall social outcomes</li>
         </ul>
+    </div>
+
+    <div class="full-paper-section">
+        <h3>Access the Full Research Paper</h3>
+        <p>For detailed methodology, complete experimental results, and theoretical framework:</p>
+        <a href="./secrecy_revised.pdf" class="full-paper-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Read Full Paper
+        </a>
     </div>
 
     <div class="results-highlight">
@@ -236,8 +303,6 @@
     </div>
 
     <div class="analysis-section">
-        <h2>Policy Implications & Strategic Impact</h2>
-        
         <h3>Institutional Design Insights</h3>
         <ul>
             <li><strong>Transparency Mechanisms:</strong> Financial disclosure requirements can significantly improve cooperative outcomes in public goods provision</li>
@@ -251,8 +316,6 @@
     </div>
 
     <div class="analysis-section">
-        <h2>Experimental Methodology & Design</h2>
-        
         <h3>Rigorous Experimental Approach</h3>
         <p>Our methodology employed a carefully controlled laboratory environment with real monetary incentives to ensure external validity and behavioral authenticity. The experimental design systematically varied institutional features while maintaining strict controls for alternative explanations.</p>
         
@@ -269,6 +332,8 @@
         <h3>Behavioral Economics Foundation</h3>
         <p>The research builds on established theories from behavioral economics, public economics, and institutional design. Our approach combines theoretical rigor with empirical innovation to generate actionable insights for policy makers and institutional designers.</p>
     </div>
+    
+    </div> <!-- End content-wrapper -->
 
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">

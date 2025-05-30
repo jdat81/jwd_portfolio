@@ -11,6 +11,46 @@
             background-color: #f8f9fa;
         }
         
+        /* New Header Styling */
+        .top-header {
+            background-color: #3a7f98;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .header-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+        }
+        
+        .header-btn:hover {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+        
         .project-card {
             transition: transform 0.3s ease-in-out;
             height: 100%;
@@ -173,6 +213,17 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .header-nav {
+                justify-content: center;
+                gap: 0.8rem;
+                flex-wrap: wrap;
+            }
+            
+            .header-btn {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+            
             .hero-section {
                 flex-direction: column;
                 padding: 3rem 0 3rem 0;
@@ -195,7 +246,16 @@
     </style>
 </head>
 <body>
-
+    <!-- New Top Header -->
+    <header class="top-header">
+        <div class="container">
+            <nav class="header-nav">
+                <a href="#projects" class="header-btn">Portfolio</a>
+                <a href="outputs/publications.html" class="header-btn">Publications</a>
+                <a href="https://drive.google.com/file/d/1RQKH50Oau3g2n1lM8K_8y_QFUaY-hPka/view?usp=sharing" class="header-btn" target="_blank" rel="noopener noreferrer">Resume</a>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -205,23 +265,6 @@
                     <h1 class="hero-title">John D'Attoma</h1>
                     <h2 class="hero-subtitle">UX Researcher & Data Scientist</h2>
                     <p class="hero-description">Uncover user insights, analyze behavioral patterns, and drive data-informed decisions - from supporting everyday product choices to enabling organizational transformation.</p>
-                    
-                    <div class="d-flex gap-3 flex-wrap">
-                        <!-- <a href="docs/Data_Scientist_Resume.pdf" class="btn btn-primary" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text me-2" viewBox="0 0 16 16">
-                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
-                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-                            </svg>
-                            See my resume
-                        </a> -->
-                        <a href="outputs/publications.html" class="btn btn-outline-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text me-2" viewBox="0 0 16 16">
-                                <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                                <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
-                            </svg>
-                            Publications
-                        </a>
-                    </div>
                 </div>
                 <div class="col-lg-6 hero-image d-none d-lg-block">
                     <img src="graphs/John1.jpg" alt="John D'Attoma" class="img-fluid">
